@@ -1,57 +1,85 @@
 * {
     box-sizing: border-box;
 }
-header.form_head{
+
+@mixin flexbox ($dir: row, $wrap: nowrap, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+header.form_head {
     width: 100%;
     padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    @include flexbox (row, nowrap, center, center);
     background-color: rgb(221, 251, 255);
-    h1{
+    h1 {
         color: rgb(42, 44, 44);
         font-family: 'Courier New', Courier, monospace;
     }
 }
+
 section.form {
     font-size: 12px;
-    width:100%;
-    main{
-        width:100%;
+    width: 100%;
+    main {
+        width: 100%;
+        @include flexbox (column, nowrap, start, center);
         form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            fieldset#podstawowe-dane{
-                width:100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
+            width: 100%;
+            @include flexbox (column, nowrap, start, center);
+            fieldset#podstawowe-dane {
+                legend {
+                    text-align: center;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                width: 50%;
+                @include flexbox (column, wrap, start, center);
                 ul {
-                    width:100%;
-                    display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                    li{ 
-                        width: 20%;   
-                        textarea, input, label {
-                            display: inline-block;
-                            margin: 0;
+                    width: 100%;
+                    @include flexbox (row, wrap, space-around, center);
+                    @media only screen and (max-width: 700px){
+                        @include flexbox (column, wrap, flex-start, flex-start);
+                    }
+                    padding: 0 40px;
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        padding: 0;
+                        @include flexbox (row, wrap, flex-end, center);
+                        width: 27%;
+                        border: solid 1px black;
+                        label{
+                            font-family: sans-serif;
+                            font-weight: bold;
+                            padding: 0 1rem;
+                            width:50%;
+                            min-width: 100px;
+                        }
+                        textarea,
+                        input {
                             background-color: gray;
                             color: white;
                             border: none;
-                            width: 100px;
-                            height: 1rem;
+                            width: 50%;
+                            height: 2rem;
                             padding: 0;
+                            min-width: 100px;
                         }
                         textarea {
                             resize: none;
+                            font-family: sans-serif;
+                        }
+                        @media only screen and (max-width: 700px){
+                            width: 100%;
+                            margin: 0;
+                            padding: 6%;
+                            input, textarea, label {
+                                width: 100%;
+                            }
                         }
                     }
                 }

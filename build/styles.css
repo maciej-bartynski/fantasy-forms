@@ -5,7 +5,8 @@ header.form_head {
   width: 100%;
   padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   background-color: #ddfbff; }
@@ -17,36 +18,78 @@ section.form {
   font-size: 12px;
   width: 100%; }
   section.form main {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center; }
     section.form main form {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: start;
       align-items: center; }
       section.form main form fieldset#podstawowe-dane {
-        width: 100%;
+        width: 50%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: start;
         align-items: center; }
+        section.form main form fieldset#podstawowe-dane legend {
+          text-align: center;
+          font-family: sans-serif;
+          font-weight: bold; }
         section.form main form fieldset#podstawowe-dane ul {
           width: 100%;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: center;
-          align-items: center; }
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 40px;
+          margin: 0; }
+          @media only screen and (max-width: 700px) {
+            section.form main form fieldset#podstawowe-dane ul {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              align-items: flex-start; } }
           section.form main form fieldset#podstawowe-dane ul li {
-            width: 20%; }
-            section.form main form fieldset#podstawowe-dane ul li textarea, section.form main form fieldset#podstawowe-dane ul li input, section.form main form fieldset#podstawowe-dane ul li label {
-              display: inline-block;
-              margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            width: 27%;
+            border: solid 1px black; }
+            section.form main form fieldset#podstawowe-dane ul li label {
+              font-family: sans-serif;
+              font-weight: bold;
+              padding: 0 1rem;
+              width: 50%;
+              min-width: 100px; }
+            section.form main form fieldset#podstawowe-dane ul li textarea,
+            section.form main form fieldset#podstawowe-dane ul li input {
               background-color: gray;
               color: white;
               border: none;
-              width: 100px;
-              height: 1rem;
-              padding: 0; }
+              width: 50%;
+              height: 2rem;
+              padding: 0;
+              min-width: 100px; }
             section.form main form fieldset#podstawowe-dane ul li textarea {
-              resize: none; }
+              resize: none;
+              font-family: sans-serif; }
+            @media only screen and (max-width: 700px) {
+              section.form main form fieldset#podstawowe-dane ul li {
+                width: 100%;
+                margin: 0;
+                padding: 6%; }
+                section.form main form fieldset#podstawowe-dane ul li input, section.form main form fieldset#podstawowe-dane ul li textarea, section.form main form fieldset#podstawowe-dane ul li label {
+                  width: 100%; } }
