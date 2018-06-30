@@ -1,0 +1,16 @@
+div {
+    border: solid 2px black;
+    span {
+        border: solid 2px black;
+        div {
+            border: solid 2px black;
+        }
+    }
+}
+
+span {
+    border: solid 2px black;
+    div {
+        border: solid 2px black;
+    }
+}
