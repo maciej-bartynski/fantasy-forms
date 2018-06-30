@@ -11,20 +11,44 @@
 </head>
 
 <body>
-    <form action="./onSubmit/submitPage.html" target="_blank">
-        <fieldset>
-            <legend>This is Core</legend>
-            <label for="imie">imie</label>
-            <input id="imie" type="text" name="imie">
-            <label for="nazwisko">przydomek</label>
-            <input id="nazwisko" type="text" name="nazwisko">
-            <label for="rist">wojownik</label>
-            <input id="rist" type="radio" name="klasa" value="wojownik">
-            <label for="nod">mag</label>
-            <input id="nod" type="radio" name="klasa" value="mag">
-        </fieldset>
-        <input type="submit" value="utwórz">
-    </form>
+    <section class="form">
+        <header class="form_head">
+            <h1>Karta postaci</h1>
+        </header>
+        <main>
+            <form action="./onSubmit/submitPage.html" target="_blank">
+                <fieldset id="podstawowe-dane">
+                    <legend>Podstawowe dane</legend>
+                    <ul>
+                        <li>
+                            <label for="imie">imię</label>
+                            <input id="imie" type="text" name="imie" />
+                        </li>
+                        <li>
+                            <label for="przydomek">przydomek</label>
+                            <input id="przydomek" type="text" name="nazwisko" />
+                        </li>
+                        <li>
+                            <label for="motto">zawołanie rodowe</label>
+                            <textarea id="motto" type="text" name="motto" maxlength="100"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Klasa</legend>
+                    <label for="rist">wojownik</label>
+                    <input id="rist" type="radio" name="klasa" value="wojownik">
+                    <label for="nod">mag</label>
+                    <input id="nod" type="radio" name="klasa" value="mag">
+                    <label for="rist">rycerz</label>
+                    <input id="rist" type="radio" name="klasa" value="wojownik">
+                    <label for="nod">alchemik</label>
+                    <input id="nod" type="radio" name="klasa" value="mag">
+                </fieldset>
+                <input type="submit" value="utwórz">
+            </form>
+        </main>
+    </section>
 </body>
 
 </html>
