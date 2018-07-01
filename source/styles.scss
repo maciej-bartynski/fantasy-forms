@@ -30,18 +30,18 @@ section.form {
         form {
             width: 100%;
             @include flexbox (column, nowrap, start, center);
-            fieldset#podstawowe-dane {
-                legend {
-                    text-align: center;
-                    font-family: sans-serif;
-                    font-weight: bold;
-                }
-                width: 50%;
-                @include flexbox (column, wrap, start, center);
-                ul {
+            ol {
+                fieldset#podstawowe-dane {
+                    legend {
+                        text-align: center;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                    }
+                    width: 50%;
+                    @include flexbox (column, wrap, start, center);
                     width: 100%;
                     @include flexbox (row, wrap, space-around, center);
-                    @media only screen and (max-width: 700px){
+                    @media only screen and (max-width: 700px) {
                         @include flexbox (column, wrap, flex-start, flex-start);
                     }
                     padding: 0 40px;
@@ -52,11 +52,11 @@ section.form {
                         @include flexbox (row, wrap, flex-end, center);
                         width: 27%;
                         border: solid 1px black;
-                        label{
+                        label {
                             font-family: sans-serif;
                             font-weight: bold;
                             padding: 0 1rem;
-                            width:50%;
+                            width: 50%;
                             min-width: 100px;
                         }
                         textarea,
@@ -73,11 +73,13 @@ section.form {
                             resize: none;
                             font-family: sans-serif;
                         }
-                        @media only screen and (max-width: 700px){
+                        @media only screen and (max-width: 700px) {
                             width: 100%;
                             margin: 0;
                             padding: 6%;
-                            input, textarea, label {
+                            input,
+                            textarea,
+                            label {
                                 width: 100%;
                             }
                         }
