@@ -15,11 +15,12 @@
         <header class="form_head">
             <h1>Karta postaci</h1>
         </header>
-        <main class="form_body">
+        <div class="form_body">
             <form action="./onSubmit/submitPage.html" target="_blank">
-                <ol>
-                    <fieldset id="podstawowe-dane">
-                        <legend>Podstawowe dane</legend>
+
+                <fieldset class="form_body_podstawowe-dane">
+                    <legend>Podstawowe dane</legend>
+                    <ul>
                         <li>
                             <label for="imie">imię</label>
                             <input id="imie" type="text" name="imie" />
@@ -32,9 +33,96 @@
                             <label for="motto">zawołanie rodowe</label>
                             <textarea id="motto" type="text" name="motto" maxlength="100"></textarea>
                         </li>
+                    </ul>
+                </fieldset>
+
+                <div class="form_body_inne-dane">
+                    <fieldset class="form_body_inne-dane_klasa">
+                        <legend>Klasa</legend>
+                        <ul>
+                            <li>
+                                <label for="barb">barbarzyńca</label>
+                                <input id="barb" type="radio" name="klasa" value="barbarzyńca">
+                            </li>
+                            <li>
+                                <label for="strz">strzelec</label>
+                                <input id="strz" type="radio" name="klasa" value="strzelec">
+                            </li>
+                            <li>
+                                <label for="zdr">zdrajca</label>
+                                <input id="zdr" type="radio" name="klasa" value="zdrajca">
+                            </li>
+                            <li>
+                                <label for="szal">szaleniec</label>
+                                <input id="szal" type="radio" name="klasa" value="szaleniec">
+                            </li>
+                            <li>
+                                <label for="czar">czarownik</label>
+                                <input id="czar" type="radio" name="klasa" value="czarownik">
+                            </li>
+                        </ul>
                     </fieldset>
-                </ol>
-                <fieldset>
+                    <fieldset class="form_body_inne-dane_klasa">
+                        <legend>Jakieś inne</legend>
+                        <ul>
+                            <li>
+                                <label for="barb">barbarzyńca</label>
+                                <input id="barb" type="radio" name="klasa" value="barbarzyńca">
+                            </li>
+                            <li>
+                                <label for="strz">strzelec</label>
+                                <input id="strz" type="radio" name="klasa" value="strzelec">
+                            </li>
+                            <li>
+                                <label for="zdr">zdrajca</label>
+                                <input id="zdr" type="radio" name="klasa" value="zdrajca">
+                            </li>
+                            <li>
+                                <label for="szal">szaleniec</label>
+                                <input id="szal" type="radio" name="klasa" value="szaleniec">
+                            </li>
+                            <li>
+                                <label for="czar">czarownik</label>
+                                <input id="czar" type="radio" name="klasa" value="czarownik">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="form_body_inne-dane_klasa">
+                        <legend>Kolejne dalsze</legend>
+                        <ul>
+                            <li>
+                                <label for="barb">barbarzyńca</label>
+                                <input id="barb" type="radio" name="klasa" value="barbarzyńca">
+                            </li>
+                            <li>
+                                <label for="strz">strzelec</label>
+                                <input id="strz" type="radio" name="klasa" value="strzelec">
+                            </li>
+                            <li>
+                                <label for="zdr">zdrajca</label>
+                                <input id="zdr" type="radio" name="klasa" value="zdrajca">
+                            </li>
+                            <li>
+                                <label for="szal">szaleniec</label>
+                                <input id="szal" type="radio" name="klasa" value="szaleniec">
+                            </li>
+                            <li>
+                                <label for="czar">czarownik</label>
+                                <input id="czar" type="radio" name="klasa" value="czarownik">
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <input type="submit" value="utwórz" id="submit">
+            </form>
+        </div>
+    </section>
+
+
+
+    <!--
+
+        <fieldset>
                     <legend>Klasa</legend>
                     <label for="rist">wojownik</label>
                     <input id="rist" type="radio" name="klasa" value="wojownik">
@@ -46,9 +134,8 @@
                     <input id="nod" type="radio" name="klasa" value="mag">
                 </fieldset>
                 <input type="submit" value="utwórz">
-            </form>
-        </main>
-    </section>
+
+    -->
 </body>
 
 </html>
