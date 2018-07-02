@@ -92,14 +92,12 @@ section.form {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center; }
+        align-items: stretch; }
         section.form div.form_body form div.form_body_inne-dane fieldset {
-          height: 100%;
           width: 30%;
           margin: 0;
           background-color: #2b2b2b;
           border-color: white;
-          background-color: #2b2b2b;
           display: flex;
           flex-direction: column;
           flex-wrap: nowrap;
@@ -107,10 +105,11 @@ section.form {
           align-items: center; }
           section.form div.form_body form div.form_body_inne-dane fieldset ul {
             width: 90%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            justify-content: flex-start;
+            justify-content: space-around;
             align-items: center;
             padding: 0;
             margin: 0;
@@ -126,11 +125,50 @@ section.form {
                 color: white;
                 text-align: left;
                 padding: 0 0 0 0.5rem;
-                order: 2;
+                order: 3;
                 text-transform: capitalize; }
-              section.form div.form_body form div.form_body_inne-dane fieldset ul li input {
+              section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon {
+                padding: 0.5rem 0 0 0;
                 order: 1;
+                width: 40%;
+                height: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center; }
+                section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon .form_body_inne-dane_uderzenie_rzedy-ikon_rzad {
+                  padding: 0 0 0 0;
+                  width: 100%;
+                  height: 33.33%;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center; }
+                  section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon .form_body_inne-dane_uderzenie_rzedy-ikon_rzad img {
+                    height: 10px; }
+              section.form div.form_body form div.form_body_inne-dane fieldset ul li input {
+                order: 2;
                 width: auto; }
+              section.form div.form_body form div.form_body_inne-dane fieldset ul li select {
+                width: 60%; }
+          section.form div.form_body form div.form_body_inne-dane fieldset input.form_body_inne-dane_third-container_nazwa-ciosu_data-list {
+            width: 100%; }
+          section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: stretch;
+            align-items: stretch;
+            margin-top: 1rem; }
+            section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona .form_body_inne-dane_third-container_nazwa-ciosu_opis {
+              width: 40%;
+              border: solid 1px green; }
+            section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona .form_body_inne-dane_third-container_nazwa-ciosu_img {
+              width: 60%;
+              border: solid 1px red; }
 
 input#submit {
   margin: 1rem; }
