@@ -1,0 +1,15 @@
+header.head {
+    background-color: $grayA;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    @include flex (row, nowrap, center, center);
+    h1 {
+        color: $grayC;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

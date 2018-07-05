@@ -1,0 +1,43 @@
+main {
+    width: 100%;
+    section {
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        background-color: $grayB;
+        padding: 1rem;
+        form {
+            @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
+            legend, h2 {
+                font-size: 1rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: $grayA;
+                letter-spacing: 0.1rem;
+                align-self: flex-start;
+            }
+            h2 {
+                align-self: center;
+            }
+            .corpus_section_form_fieldset-a{
+                width: 90%;
+            }
+            .corpus_section_form_fields{
+                margin: 0 0 0 0;
+                width: 90%;
+                @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                @media only screen and (max-width: 370mm) {
+                    @include flex($dir: row, $wrap: wrap, $jus: center, $lig: stretch);
+                }
+                .corpus_section_form_fields_fieldset-b{
+                    width: 30%;
+                    margin: 0;
+                    min-width: 105mm;
+                    @media only screen and (max-width: 220mm) {
+                        width: 100%;
+                        min-width: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

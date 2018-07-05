@@ -1,0 +1,12 @@
+$body-color: saddlebrown;
+$grayA: rgb(37, 37, 37);
+$grayB: rgb(65, 65, 65);
+$grayC: gray;
+
+@mixin flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start){
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $jus;
+    align-items: $lig
+}
