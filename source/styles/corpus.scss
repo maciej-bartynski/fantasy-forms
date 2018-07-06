@@ -8,7 +8,8 @@ main {
         padding: 1rem;
         form {
             @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            legend, h2 {
+            legend,
+            h2 {
                 font-size: 1rem;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 color: $grayA;
@@ -18,23 +19,70 @@ main {
             h2 {
                 align-self: center;
             }
-            .corpus_section_form_fieldset-a{
+            .corpus_section_form_fieldset-a {
                 width: 90%;
             }
-            .corpus_section_form_fields{
+            .corpus_section_form_fields {
                 margin: 0 0 0 0;
                 width: 90%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
-                @media only screen and (max-width: 370mm) {
-                    @include flex($dir: row, $wrap: wrap, $jus: center, $lig: stretch);
-                }
-                .corpus_section_form_fields_fieldset-b{
+                .corpus_section_form_fields_fieldset-b {
                     width: 30%;
                     margin: 0;
                     min-width: 105mm;
-                    @media only screen and (max-width: 220mm) {
-                        width: 100%;
-                        min-width: 1px;
+                    &:nth-of-type(1) {
+                        @media only screen and (max-width: 370mm) {
+                            width: 47%;
+                            min-width: 1px;
+                        }
+                        @media only screen and (max-width: 220mm) {
+                            width: 100%;
+                            min-width: 1px;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        @media only screen and (max-width: 370mm) {
+                            width: 47%;
+                            min-width: 1px;
+                        }
+                        @media only screen and (max-width: 220mm) {
+                            width: 100%;
+                            min-width: 1px;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        @media only screen and (max-width: 370mm) {
+                            width: 100%;
+                            min-width: 1px;
+                        }
+                    }
+                }
+            }
+            .corpus_section_form_fieldset-c {
+                margin: 0 0 0 0;
+                width: 90%;
+                div.corpus_section_form_fieldset-c_flexbox-container {
+                    width: 100%;
+                    @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                    .corpus_section_form_fieldset-c_flexbox-container_list-container {
+                        width: 10%;
+                        @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: stretch);
+                        label {
+                            color: white;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                        select {
+                            width: 100%;
+                        }
+                    }
+                    .corpus_section_form_fieldset-c_imgs {
+                        width: 75%;
+                        @include flex($dir: row, $wrap: wrap, $jus: space-around, $lig: stretch);
+                        .corpus_section_form_fieldset-c_imgs_img {
+                            width: 15%;
+                            border: solid 1px white;
+                        }
                     }
                 }
             }

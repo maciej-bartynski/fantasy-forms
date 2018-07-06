@@ -53,7 +53,8 @@ main section form {
   align-items: center;
 }
 
-main section form legend, main section form h2 {
+main section form legend,
+main section form h2 {
   font-size: 1rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #252525;
@@ -79,25 +80,90 @@ main section form .corpus_section_form_fields {
   align-items: stretch;
 }
 
-@media only screen and (max-width: 370mm) {
-  main section form .corpus_section_form_fields {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-  }
-}
-
 main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
   width: 30%;
   margin: 0;
   min-width: 105mm;
 }
 
+@media only screen and (max-width: 370mm) {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(1) {
+    width: 47%;
+    min-width: 1px;
+  }
+}
+
 @media only screen and (max-width: 220mm) {
-  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(1) {
     width: 100%;
     min-width: 1px;
   }
+}
+
+@media only screen and (max-width: 370mm) {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(2) {
+    width: 47%;
+    min-width: 1px;
+  }
+}
+
+@media only screen and (max-width: 220mm) {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(2) {
+    width: 100%;
+    min-width: 1px;
+  }
+}
+
+@media only screen and (max-width: 370mm) {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(3) {
+    width: 100%;
+    min-width: 1px;
+  }
+}
+
+main section form .corpus_section_form_fieldset-c {
+  margin: 0 0 0 0;
+  width: 90%;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container label {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select {
+  width: 100%;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
+  width: 15%;
+  border: solid 1px white;
 }
