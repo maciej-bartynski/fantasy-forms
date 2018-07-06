@@ -1,0 +1,26 @@
+.corpus_section_form .corpus_section_form_fieldset-a .corpus_section_form_fieldset-a_container .corpus_section_form_fieldset-a_container_inp-lab-container {
+    width: 30%;
+    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+    background-color: $grayC;
+    border:solid 1px $grayA;
+    @media only screen and (max-width: 220mm) {
+        width: 100%;
+        margin: 1rem;
+    }
+    label {
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        align-self: flex-start;
+        padding: 0.1rem 0 0.1rem 0.2rem;
+    }
+    input,
+    textarea {
+        height: 1.3rem;
+        padding: 0.1rem;
+        width: 100%;
+        background-color: $grayA;
+        border: none;
+        color: white;
+    }
+}

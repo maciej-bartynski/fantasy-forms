@@ -21,6 +21,10 @@ main {
             }
             .corpus_section_form_fieldset-a {
                 width: 90%;
+                .corpus_section_form_fieldset-a_container{
+                    width: 100%;
+                    @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                }
             }
             .corpus_section_form_fields {
                 margin: 0 0 0 0;
@@ -83,6 +87,16 @@ main {
                             width: 15%;
                             border: solid 1px white;
                         }
+                    }
+                }
+            }
+            .corpus_section_form_fields-2 {
+                width: 90%;
+                @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                .corpus_section_form_fields-2_fieldset-d {
+                    width: 47%;
+                    @media only screen and (max-width: 220mm) {
+                        width: 100%;
                     }
                 }
             }
