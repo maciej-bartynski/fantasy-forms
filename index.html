@@ -7,157 +7,35 @@
     <title>Fantasy Forms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="build/styles.css" />
-    <script src="build/main.js"></script>
+    <script src="build/script.js"></script>
 </head>
 
 <body>
-    <section class="form">
-        <header class="form_head">
-            <h1>Karta postaci</h1>
-        </header>
-        <div class="form_body">
-            <form action="./onSubmit/submitPage.html" target="_blank">
-
-                <fieldset class="form_body_podstawowe-dane">
-                    <legend>Podstawowe dane</legend>
-                    <ul>
-                        <li>
-                            <label for="imie">imię</label>
-                            <input id="imie" type="text" name="imie" />
-                        </li>
-                        <li>
-                            <label for="przydomek">przydomek</label>
-                            <input id="przydomek" type="text" name="nazwisko" />
-                        </li>
-                        <li>
-                            <label for="motto">zawołanie rodowe</label>
-                            <textarea id="motto" type="text" name="motto" maxlength="100"></textarea>
-                        </li>
-                    </ul>
+    <header class="head">
+        <h1>Kaprys bogów - karta postaci</h1>
+    </header>
+    <main class="corpus">
+        <section class="corpus_section">
+            <form class="corpus_section_form" target="_blank">
+                <h2>Twój bohater</h2>
+                <fieldset class="corpus_section_form_fieldset-a">
+                    <legend>Tożsamość</legend>
                 </fieldset>
-
-                <div class="form_body_inne-dane">
-                    <fieldset class="form_body_inne-dane_klasa">
+                <div class="corpus_section_form_fields">
+                    <fieldset class="corpus_section_form_fields_fieldset-b">
                         <legend>Klasa</legend>
-                        <ul>
-                            <li>
-                                <label for="barb">barbarzyńca</label>
-                                <input id="barb" type="radio" name="klasa" value="barbarzyńca">
-                            </li>
-                            <li>
-                                <label for="strz">strzelec</label>
-                                <input id="strz" type="radio" name="klasa" value="strzelec">
-                            </li>
-                            <li>
-                                <label for="zdr">zdrajca</label>
-                                <input id="zdr" type="radio" name="klasa" value="zdrajca">
-                            </li>
-                            <li>
-                                <label for="szal">szaleniec</label>
-                                <input id="szal" type="radio" name="klasa" value="szaleniec">
-                            </li>
-                            <li>
-                                <label for="czar">czarownik</label>
-                                <input id="czar" type="radio" name="klasa" value="czarownik">
-                            </li>
-                            <li>
-                                <label for="wsc">Wściekły karzeł</label>
-                                <input id="wsc" type="radio" name="klasa" value="wsciekly karzel">
-                            </li>
-                        </ul>
                     </fieldset>
-                    <fieldset class="form_body_inne-dane_uderzenie">
+                    <fieldset class="corpus_section_form_fields_fieldset-b">
                         <legend>Podstawowe uderzenie</legend>
-                        <ul>
-                            <li>
-                                <select id="barb-set" name="barb-set" size="3">
-                                    <option value="barb-set-1" default>Barbarzyńskie ultra-uderzenie</option>
-                                    <option value="barb-set-2">Barbarzyńskie uderzenie Potęgami</option>
-                                    <option value="barb-set-3">Barbarzyńskie uderzenie weterana</option>
-                                </select>
-                                <div class="form_body_inne-dane_uderzenie_rzedy-ikon">
-                                    <div class="form_body_inne-dane_uderzenie_rzedy-ikon_rzad"><img src="icons/bron-barba.svg"><img src="icons/bron-barba.svg"><img src="icons/bron-barba.svg"></div>
-                                    <div class="form_body_inne-dane_uderzenie_rzedy-ikon_rzad"><img src="icons/bron-barba.svg"><img src="icons/zyw-ogien.svg"><img src="icons/zyw-ogien.svg"><img src="icons/zyw-ogien.svg"></div>
-                                    <div class="form_body_inne-dane_uderzenie_rzedy-ikon_rzad"><img src="icons/bron-barba.svg"><img src="icons/zyw-ogien.svg"><img src="icons/zyw-wod.svg"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <label for="strze-set">uderzenie strzelca</label>
-                                <select id="strze-set" name="strze-set" size="3">
-                                    <option value="strze-set-1" default>set 1</option>
-                                    <option value="strze-set-2">set 2</option>
-                                    <option value="strze-set-3">set 3</option>
-                                </select>
-                            </li>
-                            <li>
-                                <label for="zdr-set">uderzenie zdrajcy</label>
-                                <select id="zdr-set" name="zdr-set" size="3">
-                                    <option value="strze-set-1" default>set 1</option>
-                                    <option value="strze-set-2">set 2</option>
-                                    <option value="strze-set-3">set 3</option>
-                                </select>
-                            </li>
-                            <li>
-                                <label for="szal">uderzenie szaleńca</label>
-                                <select id="szal-set" name="szal-set" size="3">
-                                    <option value="szal-set-1" default>set 1</option>
-                                    <option value="szal-set-2">set 2</option>
-                                    <option value="szal-set-3">set 3</option>
-                                </select>
-                            </li>
-                            <li>
-                                <label for="mag">uderzenie czarownika</label>
-                                <select id="mag-set" name="mag-set" size="3">
-                                    <option value="mag-set-1" default>set 1</option>
-                                    <option value="mag-set-2">set 2</option>
-                                    <option value="mag-set-3">set 3</option>
-                                </select>
-                            </li>
-                            <li>
-                                <label for="wsc">uderzenie karła</label>
-                                <select id="wsc-set" name="wsc-set" size="3">
-                                    <option value="wsc-set-1" default>set 1</option>
-                                    <option value="wsc-set-2">set 2</option>
-                                    <option value="wsc-set-3">set 3</option>
-                                </select>
-                            </li>
-                        </ul>
                     </fieldset>
-                    <fieldset class="form_body_inne-dane_third-container_nazwa-ciosu">
+                    <fieldset class="corpus_section_form_fields_fieldset-b">
                         <legend>To uderzenie zasłynie jako</legend>
-                        <input list="strike-name" name="strike-name" class="form_body_inne-dane_third-container_nazwa-ciosu_data-list">
-                        <datalist id="strike-name">
-                            <option value="Mocarny cios">
-                                <option value="Zgniatacz pysków">
-                                    <option value="Łamacz sumień">
-                                        <option value="Czaszkozgniot">
-                                            <option value="Odlew tytana">
-                                                <option value="Ukłucie">
-                                                    <option value="Ręka boga">
-                                                        <option value="Sztych ukradkiem">
-                                                            <option value="Pękacz żeber">
-                                                                <option value="Zabijacz">
-                        </datalist>
-                        <div class="form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona">
-                            <p class="form_body_inne-dane_third-container_nazwa-ciosu_opis">
-                                <span>
-                                    <span id="span-nazwa-uderzenia">NAZWA-UDERZENIA</span> to
-                                    <span id="span-epitet">PRZYMIOTNIK</span> bronią
-                                    <span id="span-nazwa-ikony broni">IKONA-1</span>, wspierane mocą pierwotnych potęg:
-                                    <span class="span-nazwa-zywiolu">ŻYWIOŁ</span>.
-                                </span>
-                            </p>
-                            <div class="form_body_inne-dane_third-container_nazwa-ciosu_img">
-                                IMGtuBedzie
-                            </div>
-                        </div>
                     </fieldset>
                 </div>
-                <input type="submit" value="utwórz" id="submit">
             </form>
-        </div>
-    </section>
-
+        </section>
+    </main>
+    <footer class="foot"></footer>
 </body>
 
 </html>

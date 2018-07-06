@@ -1,174 +1,103 @@
+html {
+  font-size: 16px;
+}
+
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
+  background-color: saddlebrown;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
-section.form {
-  font-size: 16px;
+header.head {
+  background-color: #252525;
   width: 100%;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header.head h1 {
+  color: gray;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background-color: #414141;
+  padding: 1rem;
+}
+
+main section form {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center; }
-  section.form header {
-    width: 100%;
-    padding: 1rem;
-    font-size: 0.7em;
-    background-color: #2b2b2b; }
-    section.form header h1 {
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center; }
-  section.form div.form_body {
-    width: 100%;
+  align-items: center;
+}
+
+main section form legend, main section form h2 {
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #252525;
+  letter-spacing: 0.1rem;
+  align-self: flex-start;
+}
+
+main section form h2 {
+  align-self: center;
+}
+
+main section form .corpus_section_form_fieldset-a {
+  width: 90%;
+}
+
+main section form .corpus_section_form_fields {
+  margin: 0 0 0 0;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+@media only screen and (max-width: 370mm) {
+  main section form .corpus_section_form_fields {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center; }
-    section.form div.form_body form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      background-color: #646464; }
-      section.form div.form_body form fieldset {
-        width: 90%;
-        background-color: #2b2b2b;
-        border-color: white;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0.5rem; }
-        section.form div.form_body form fieldset legend {
-          color: white;
-          text-align: left;
-          font-weight: bold;
-          font-size: 0.7rem;
-          text-transform: uppercase; }
-        section.form div.form_body form fieldset ul {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: flex-end;
-          padding: 0; }
-          section.form div.form_body form fieldset ul li {
-            width: 27%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-            align-items: flex-start;
-            margin: 0.5rem 0; }
-            section.form div.form_body form fieldset ul li label {
-              color: white;
-              width: 100%;
-              text-align: left;
-              padding: 0 0 0 0.5rem; }
-            section.form div.form_body form fieldset ul li input,
-            section.form div.form_body form fieldset ul li textarea {
-              width: 100%;
-              height: 2rem;
-              padding: 0;
-              margin: 0;
-              font-family: serif; }
-      section.form div.form_body form div.form_body_inne-dane {
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: stretch; }
-        section.form div.form_body form div.form_body_inne-dane fieldset {
-          width: 30%;
-          margin: 0;
-          background-color: #2b2b2b;
-          border-color: white;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: center;
-          align-items: center; }
-          section.form div.form_body form div.form_body_inne-dane fieldset ul {
-            width: 90%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-            list-style: none; }
-            section.form div.form_body form div.form_body_inne-dane fieldset ul li {
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              flex-wrap: nowrap;
-              justify-content: flex-start;
-              align-items: center; }
-              section.form div.form_body form div.form_body_inne-dane fieldset ul li label {
-                color: white;
-                text-align: left;
-                padding: 0 0 0 0.5rem;
-                order: 3;
-                text-transform: capitalize; }
-              section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon {
-                padding: 0.5rem 0 0 0;
-                order: 1;
-                width: 40%;
-                height: 100%;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                align-items: center; }
-                section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon .form_body_inne-dane_uderzenie_rzedy-ikon_rzad {
-                  padding: 0 0 0 0;
-                  width: 100%;
-                  height: 33.33%;
-                  display: flex;
-                  flex-direction: row;
-                  flex-wrap: nowrap;
-                  justify-content: flex-start;
-                  align-items: center; }
-                  section.form div.form_body form div.form_body_inne-dane fieldset ul li .form_body_inne-dane_uderzenie_rzedy-ikon .form_body_inne-dane_uderzenie_rzedy-ikon_rzad img {
-                    height: 10px; }
-              section.form div.form_body form div.form_body_inne-dane fieldset ul li input {
-                order: 2;
-                width: auto; }
-              section.form div.form_body form div.form_body_inne-dane fieldset ul li select {
-                width: 60%; }
-          section.form div.form_body form div.form_body_inne-dane fieldset input.form_body_inne-dane_third-container_nazwa-ciosu_data-list {
-            width: 100%; }
-          section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: stretch;
-            align-items: stretch;
-            margin-top: 1rem; }
-            section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona .form_body_inne-dane_third-container_nazwa-ciosu_opis {
-              width: 40%;
-              border: solid 1px green; }
-            section.form div.form_body form div.form_body_inne-dane fieldset .form_body_inne-dane_third-container_nazwa-ciosu_opis-i-ikona .form_body_inne-dane_third-container_nazwa-ciosu_img {
-              width: 60%;
-              border: solid 1px red; }
+    align-items: stretch;
+  }
+}
 
-input#submit {
-  margin: 1rem; }
+main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
+  width: 30%;
+  margin: 0;
+  min-width: 105mm;
+}
+
+@media only screen and (max-width: 220mm) {
+  main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
+    width: 100%;
+    min-width: 1px;
+  }
+}
