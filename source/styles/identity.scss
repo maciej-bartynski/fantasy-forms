@@ -64,13 +64,15 @@
             @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
             height: 6rem;
             background-color: $grayA;
+            border: solid 2px white;
             .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
-                width: 50%;
+                width: 40%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 select {
+                    background-color: $grayB;
                     width: 200%;
                     height: 100%;
                     margin: 0 -200% 0 0;
@@ -83,8 +85,9 @@
                         background-color: $grayA;
                         border: solid 4px $grayB;
                         border-right: none;
+                        padding-right: 50%;
                         border-collapse: collapse;
-                        @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+                        @include flex($dir: row, $wrap: nowrap, $jus: flex-end, $lig: center);
                         &:hover {
                             background-color: $grayC;
                         }
@@ -92,7 +95,7 @@
                 }
             }
             .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container {
-                width: 50%;
+                width: 60%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
@@ -103,8 +106,14 @@
                     border: solid 4px $grayB;
                     border-collapse: collapse;
                     border-left: none;
+                    padding: 3px 0;
                     @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
                     .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
+                        &.empty {
+                            width: 1rem;
+                            border: solid 2px white;
+                            border-radius: 100px;
+                        }
                         height: 100%;
                         &:nth-of-type(1){
                             margin: 0 5%;
