@@ -29,13 +29,13 @@
     .corpus_section_form_fields_fieldset-b_container {
         width: 100%;
         @include flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start);
-        .corpus_section_form_fields_fieldset-b_container_radio-lab-container{
+        .corpus_section_form_fields_fieldset-b_container_radio-lab-container {
             margin: 0.2rem 0;
             width: 100%;
             height: 4rem;
             background-color: $grayA;
             @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
-            &:hover{
+            &:hover {
                 background-color: $grayC;
             }
             label {
@@ -53,32 +53,39 @@
         }
     }
 }
+
 .corpus_section_form_fields_fieldset-b.a {
     .corpus_section_form_fields_fieldset-b_container {
         width: 100%;
         @include flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start);
-        .corpus_section_form_fields_fieldset-b_container_select-container{
+        .corpus_section_form_fields_fieldset-b_container_select-container {
             margin: 0.2rem 0;
             width: 100%;
             @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
             height: 4rem;
             background-color: $grayA;
-            select {
+            .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
                 width: 50%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                border: none;
                 overflow: hidden;
-                option {
-                    height: 33.33%;
-                    color: white;
-                    background-color: $grayA;
-                    border: solid 1px white;
-                    border-right: none;
-                    border-collapse: collapse;
-                    &:hover{
-                        background-color: $grayC;
+                select {
+                    width: 200%;
+                    height: 100%;
+                    margin: 0 -200% 0 0;
+                    padding: 0;
+                    border: none;
+                    option {
+                        height: 33.33%;
+                        color: white;
+                        background-color: $grayA;
+                        border: solid 1px $grayB;
+                        border-right: none;
+                        border-collapse: collapse;
+                        &:hover {
+                            background-color: $grayC;
+                        }
                     }
                 }
             }
@@ -87,13 +94,23 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                @include flex($dir: column, $wrap: nowrap, $jus: space-between, $lig: center);
-                div {
+                @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
+                div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt {
                     width: 100%;
                     height: 33.33%;
-                    border: solid 1px white;
+                    border: solid 1px $grayB;
                     border-collapse: collapse;
                     border-left: none;
+                    @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+                    .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
+                        height: 100%;
+                        img {
+                            border: solid 1px white;
+                            border-radius: 999px;
+                            height: 100%;
+                            padding: 2px;
+                        }
+                    }
                 }
             }
         }

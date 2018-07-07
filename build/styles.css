@@ -291,25 +291,32 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   background-color: #252525;
 }
 
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container select {
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
   width: 50%;
   height: 100%;
   margin: 0;
   padding: 0;
-  border: none;
   overflow: hidden;
 }
 
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container select option {
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list select {
+  width: 200%;
+  height: 100%;
+  margin: 0 -200% 0 0;
+  padding: 0;
+  border: none;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list select option {
   height: 33.33%;
   color: white;
   background-color: #252525;
-  border: solid 1px white;
+  border: solid 1px #414141;
   border-right: none;
   border-collapse: collapse;
 }
 
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container select option:hover {
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list select option:hover {
   background-color: gray;
 }
 
@@ -321,14 +328,30 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div {
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt {
   width: 100%;
   height: 33.33%;
-  border: solid 1px white;
+  border: solid 1px #414141;
   border-collapse: collapse;
   border-left: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
+  height: 100%;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner img {
+  border: solid 1px white;
+  border-radius: 999px;
+  height: 100%;
+  padding: 2px;
 }
