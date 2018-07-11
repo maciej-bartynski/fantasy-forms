@@ -597,17 +597,41 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  position: relative;
+  border: black 5px solid;
 }
 
 .corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .moc {
-  width: 45%;
+  width: 50%;
   height: 100px;
   background-color: #252525;
 }
 
 .corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .pietno {
-  width: 40%;
+  width: 50%;
   height: 100px;
   background-color: gray;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .pieczec {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  border-radius: 40px;
+  border: solid 1px white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .pieczec img {
+  width: 40px;
+  height: 40px;
 }
