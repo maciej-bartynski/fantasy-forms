@@ -91,6 +91,7 @@ main section form .corpus_section_form_fields {
 main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
   width: 30%;
   margin: 0;
+  padding-bottom: 3rem;
   min-width: 105mm;
 }
 
@@ -290,6 +291,8 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   height: 6rem;
   background-color: #252525;
   border: solid 2px white;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
@@ -378,4 +381,133 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   border-radius: 999px;
   height: 100%;
   padding: 2px;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_list-cont {
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_list-cont label {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_list-cont input {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-des-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_des-cont {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_des-cont p.--des {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container {
+  width: 10%;
+  min-width: 100px;
+  position: relative;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container img.shield-itself {
+  width: 100%;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container .shield-container_ico {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container .shield-container_ico img.ico-itself {
+  width: 75%;
+  height: 70%;
+  border: solid 4px white;
+  background-color: #414141;
+  border-radius: 999px;
+  padding: 10%;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container div.banner-itself {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 7%;
+  min-width: 60px;
+  border: solid 1px white;
+  border-bottom: none;
+  border-top: none;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container div.banner-itself img {
+  width: 60%;
 }

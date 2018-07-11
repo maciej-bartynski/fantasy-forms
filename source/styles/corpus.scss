@@ -32,6 +32,7 @@ main {
                 .corpus_section_form_fields_fieldset-b {
                     width: 30%;
                     margin: 0;
+                    padding-bottom: 3rem;
                     min-width: 105mm;
                     &:nth-of-type(1) {
                         @media only screen and (max-width: 370mm) {
