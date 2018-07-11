@@ -20,7 +20,7 @@ main {
             }
             .corpus_section_form_fieldset-a {
                 width: 90%;
-                .corpus_section_form_fieldset-a_container{
+                .corpus_section_form_fieldset-a_container {
                     width: 100%;
                     @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
                 }
@@ -67,25 +67,55 @@ main {
                 width: 90%;
                 div.corpus_section_form_fieldset-c_flexbox-container {
                     width: 100%;
-                    @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                    @include flex($dir: row, $wrap: wrap, $jus: center, $lig: stretch);
                     .corpus_section_form_fieldset-c_flexbox-container_list-container {
-                        width: 10%;
+                        width: 200px;
+                        overflow: hidden;
                         @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: stretch);
+                        border: solid 1px white;
+                        @media only screen and (max-width: 1000px) {
+                            width: 45%;
+                        }
                         label {
                             color: white;
                             font-weight: bold;
                             text-align: center;
                         }
                         select {
-                            width: 100%;
+                            width: 140%;
+                            margin: 0 -20%;
+                            padding: 0 20%;
+                            background-color: $grayB;
+                            border: none;
+                            option {
+                                border: solid 5px $grayB;
+                                color: white;
+                            }
                         }
                     }
                     .corpus_section_form_fieldset-c_imgs {
-                        width: 75%;
+                        width: 70%;
+                        @media only screen and (max-width: 1000px) {
+                            width: 95%;
+                        }
                         @include flex($dir: row, $wrap: wrap, $jus: space-around, $lig: stretch);
                         .corpus_section_form_fieldset-c_imgs_img {
                             width: 15%;
-                            border: solid 1px white;
+                            @media only screen and (max-width: 700px) {
+                                width: 30%;
+                            }
+                            .corpus_section_form_fieldset-c_imgs_img {
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                img.plate {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
                         }
                     }
                 }

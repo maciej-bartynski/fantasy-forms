@@ -140,17 +140,25 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
 }
 
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
-  width: 10%;
+  width: 200px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
+  border: solid 1px white;
+}
+
+@media only screen and (max-width: 1000px) {
+  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
+    width: 45%;
+  }
 }
 
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container label {
@@ -160,11 +168,20 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
 }
 
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select {
-  width: 100%;
+  width: 140%;
+  margin: 0 -20%;
+  padding: 0 20%;
+  background-color: #414141;
+  border: none;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select option {
+  border: solid 5px #414141;
+  color: white;
 }
 
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
-  width: 75%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -172,9 +189,34 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
   align-items: stretch;
 }
 
+@media only screen and (max-width: 1000px) {
+  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
+    width: 95%;
+  }
+}
+
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
   width: 15%;
-  border: solid 1px white;
+}
+
+@media only screen and (max-width: 700px) {
+  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
+    width: 30%;
+  }
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img img.plate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 main section form .corpus_section_form_fields-2 {
@@ -529,4 +571,43 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
 
 .corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--standart .--standart_img {
   width: 30px;
+}
+
+.corpus_section_form_fields-2_fieldset-d {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .moc {
+  width: 45%;
+  height: 100px;
+  background-color: #252525;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .pietno {
+  width: 40%;
+  height: 100px;
+  background-color: gray;
 }

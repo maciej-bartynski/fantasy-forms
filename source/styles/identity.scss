@@ -169,7 +169,7 @@
                 margin: 0;
                 padding: 0;
                 color: white;
-                &.itsHidden{
+                &.itsHidden {
                     opacity: 0;
                 }
             }
@@ -177,7 +177,7 @@
         .corpus_section_form_fields_fieldset-b_container_imag-cont {
             width: 100%;
             @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            .--helmet{
+            .--helmet {
                 width: 100%;
                 @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
                 .--helmet_img {
@@ -185,7 +185,7 @@
                     height: 100px;
                 }
             }
-            .--plate{
+            .--plate {
                 padding-top: 1rem;
                 width: 100%;
                 @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
@@ -199,7 +199,7 @@
                     }
                 }
             }
-            .--standart{
+            .--standart {
                 width: 100%;
                 @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
                 .--standart_img_bckg {
@@ -220,6 +220,29 @@
                 .--standart_img {
                     width: 30px;
                 }
+            }
+        }
+    }
+}
+
+.corpus_section_form_fields-2_fieldset-d {
+    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+    .corpus_section_form_fields-2_fieldset-d_container {
+        width: 100%;
+        @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+        .corpus_section_form_fields-2_fieldset-d_container_moce{
+            width: 100%;
+            @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+            padding: 1rem;
+            .moc {
+                width: 45%;
+                height: 100px;
+                background-color: $grayA;
+            }
+            .pietno{
+                width: 40%;
+                height: 100px;
+                background-color: $grayC;
             }
         }
     }
