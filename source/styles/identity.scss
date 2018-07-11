@@ -174,43 +174,48 @@
         .corpus_section_form_fields_fieldset-b_container_imag-cont {
             width: 100%;
             @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            .shield-container {
-                width: 10%;
-                min-width: 100px;
-                position: relative;
-                img.shield-itself {
-                    width: 100%;
+            .--helmet{
+                width: 100%;
+                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+                .--helmet_img {
+                    width: 100px;
+                    height: 100px;
                 }
-                .shield-container_ico {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
+            }
+            .--plate{
+                width: 100%;
+                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+                .--plate_img {
                     @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                    img.ico-itself {
-                        width: 75%;
-                        height: 70%;
-                        border: solid 4px white;
-                        background-color: $grayB;
-                        border-radius: 999px;
-                        padding: 10%;
+                    width: 50px;
+                    height: 50px;
+                    background-image: url("./../icons/pole.svg");
+                    img {
+                        width: 70%;
                     }
                 }
             }
-            .banner-container {
+            .--standart{
                 width: 100%;
-                @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-                div.banner-itself {
-                    @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-                    width: 7%;
-                    min-width: 60px;
-                    border: solid 1px white;
-                    border-bottom: none;
-                    border-top: none;
+                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+                padding-bottom: 2rem;
+                .--standart_img_bckg {
+                    width: 30px;
+                    border: solid white;
+                    border-width: 0 1pt;
+                    height: 100%;
+                    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+                    padding: 1rem 0;
                     img {
-                        width: 60%;
+                        width: 25px;
+                        height: 25px;
+                        border: solid 1px white;
+                        border-radius: 100px;
+                        background-color: $grayB;
                     }
+                }
+                .--standart_img {
+                    width: 30px;
                 }
             }
         }

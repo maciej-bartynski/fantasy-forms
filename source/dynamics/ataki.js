@@ -32,14 +32,14 @@ function initializeAttacksPart() {
         }
     }
 }
-function synchronizeBackgroundsOfOtherOptns(cont, iter){
-    
-        for (let x = 0; x < iter; x++) {
-            let belt = cont.querySelectorAll('.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt')[x];
-            belt.style.backgroundColor="inherit";
-        }
-    
+
+function synchronizeBackgroundsOfOtherOptns(cont, iter) {
+    for (let x = 0; x < iter; x++) {
+        let belt = cont.querySelectorAll('.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt')[x];
+        belt.style.backgroundColor = "inherit";
+    }
 }
+
 function synchronizeThisBckgrWithImageBeltHoverBckgr(opt, cont, x, isEnter) {
     let belt = cont.querySelectorAll('.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt')[x];
     if (isEnter === true) {

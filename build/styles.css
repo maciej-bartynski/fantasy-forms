@@ -454,22 +454,8 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   align-items: center;
 }
 
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container {
-  width: 10%;
-  min-width: 100px;
-  position: relative;
-}
-
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container img.shield-itself {
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--helmet {
   width: 100%;
-}
-
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container .shield-container_ico {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -477,37 +463,66 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   align-items: center;
 }
 
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .shield-container .shield-container_ico img.ico-itself {
-  width: 75%;
-  height: 70%;
-  border: solid 4px white;
-  background-color: #414141;
-  border-radius: 999px;
-  padding: 10%;
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--helmet .--helmet_img {
+  width: 100px;
+  height: 100px;
 }
 
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container {
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--plate {
   width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container div.banner-itself {
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--plate .--plate_img {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 7%;
-  min-width: 60px;
-  border: solid 1px white;
-  border-bottom: none;
-  border-top: none;
+  width: 50px;
+  height: 50px;
+  background-image: url("./../icons/pole.svg");
 }
 
-.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .banner-container div.banner-itself img {
-  width: 60%;
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--plate .--plate_img img {
+  width: 70%;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--standart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--standart .--standart_img_bckg {
+  width: 30px;
+  border: solid white;
+  border-width: 0 1pt;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--standart .--standart_img_bckg img {
+  width: 25px;
+  height: 25px;
+  border: solid 1px white;
+  border-radius: 100px;
+  background-color: #414141;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont .--standart .--standart_img {
+  width: 30px;
 }
