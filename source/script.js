@@ -6,3 +6,4 @@ import './styles/identity.scss';
 
 import './dynamics/klasa.js';
 import './dynamics/ataki.js';
+import './dynamics/ataki-set-txt.js';

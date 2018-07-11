@@ -169,6 +169,9 @@
                 margin: 0;
                 padding: 0;
                 color: white;
+                &.itsHidden{
+                    opacity: 0;
+                }
             }
         }
         .corpus_section_form_fields_fieldset-b_container_imag-cont {
@@ -183,6 +186,7 @@
                 }
             }
             .--plate{
+                padding-top: 1rem;
                 width: 100%;
                 @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
                 .--plate_img {
@@ -198,11 +202,10 @@
             .--standart{
                 width: 100%;
                 @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                padding-bottom: 2rem;
                 .--standart_img_bckg {
                     width: 30px;
                     border: solid white;
-                    border-width: 0 1pt;
+                    border-width: 0 1px;
                     height: 100%;
                     @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
                     padding: 1rem 0;
