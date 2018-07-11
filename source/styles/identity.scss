@@ -1,267 +1,412 @@
 .corpus_section_form_fieldset-a_container_inp-lab-container {
-    width: 30%;
-    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-    background-color: $grayC;
-    border: solid 1px $grayA;
-    @media only screen and (max-width: 220mm) {
-        width: 100%;
-        margin: 1rem;
-    }
-    label {
+  width: 30%;
+  @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+  background-color: $grayC;
+  border: solid 1px $grayA;
+  @media only screen and (max-width: 220mm) {
+    width: 100%;
+    margin: 1rem;
+  }
+  label {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    align-self: flex-start;
+    padding: 0.1rem 0 0.1rem 0.2rem;
+  }
+  input,
+  textarea {
+    height: 1.3rem;
+    padding: 0.1rem;
+    width: 100%;
+    background-color: $grayA;
+    border: none;
+    color: white;
+  }
+}
+
+.corpus_section_form_fields_fieldset-b.a {
+  .corpus_section_form_fields_fieldset-b_container {
+    width: 100%;
+    @include flex(
+      $dir: column,
+      $wrap: nowrap,
+      $jus: space-around,
+      $lig: flex-start
+    );
+    .corpus_section_form_fields_fieldset-b_container_radio-lab-container {
+      margin: 0.2rem 0;
+      width: 100%;
+      height: 6rem;
+      background-color: $grayA;
+      @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+      &:hover {
+        background-color: $grayC;
+      }
+      label {
+        order: 2;
         color: white;
         font-weight: bold;
-        text-align: left;
-        align-self: flex-start;
-        padding: 0.1rem 0 0.1rem 0.2rem;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+      }
+      input {
+        order: 1;
+      }
     }
-    input,
-    textarea {
-        height: 1.3rem;
-        padding: 0.1rem;
-        width: 100%;
-        background-color: $grayA;
-        border: none;
-        color: white;
-    }
+  }
 }
-
 .corpus_section_form_fields_fieldset-b.a {
-    .corpus_section_form_fields_fieldset-b_container {
-        width: 100%;
-        @include flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start);
-        .corpus_section_form_fields_fieldset-b_container_radio-lab-container {
-            margin: 0.2rem 0;
-            width: 100%;
-            height: 6rem;
-            background-color: $grayA;
-            @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
-            &:hover {
-                background-color: $grayC;
-            }
-            label {
-                order: 2;
-                color: white;
-                font-weight: bold;
-                font-family: sans-serif;
-                text-transform: uppercase;
-                font-size: 0.7rem;
-                letter-spacing: 0.1rem;
-            }
-            input {
-                order: 1;
-            }
-        }
-    }
-}
-
-.corpus_section_form_fields_fieldset-b.a {
-    .corpus_section_form_fields_fieldset-b_container {
-        width: 100%;
-        @include flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start);
-        .corpus_section_form_fields_fieldset-b_container_select-container {
-            margin: 0.2rem 0;
-            width: 100%;
-            @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
-            height: 6rem;
-            background-color: $grayA;
-            border: solid 2px white;
-            .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
-                width: 40%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                select {
-                    background-color: $grayB;
-                    width: 200%;
-                    height: 100%;
-                    margin: 0 -200% 0 0;
-                    padding: 0;
-                    border: none;
-                    @include flex($dir: column, $wrap: nowrap, $jus: space-around, $lig: flex-start);
-                    option {
-                        height: 33.33%;
-                        color: white;
-                        background-color: $grayA;
-                        border: solid 4px $grayB;
-                        border-right: none;
-                        padding-right: 50%;
-                        border-collapse: collapse;
-                        @include flex($dir: row, $wrap: nowrap, $jus: flex-end, $lig: center);
-                        &:hover {
-                            background-color: $grayC;
-                        }
-                    }
-                }
-            }
-            .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container {
-                width: 60%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                @include flex($dir: column, $wrap: nowrap, $jus: space-between, $lig: center);
-                div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt {
-                    width: 100%;
-                    height: 33.33%;
-                    border: solid 4px $grayB;
-                    border-collapse: collapse;
-                    border-left: none;
-                    padding: 3px 0;
-                    @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
-                    .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
-                        &.empty {
-                            width: 1rem;
-                            border: solid 2px white;
-                            border-radius: 100px;
-                        }
-                        height: 100%;
-                        &:nth-of-type(1) {
-                            margin: 0 5%;
-                        }
-                        img {
-                            border: solid 1px white;
-                            border-radius: 999px;
-                            height: 100%;
-                            padding: 2px;
-                        }
-                    }
-                }
-            }
-            opacity: 0.1;
-            pointer-events: none;
-            &.enabled {
-                opacity: 1;
-                pointer-events: auto;
-            }
-        }
-    }
-}
-
-.corpus_section_form_fields_fieldset-b {
-    .corpus_section_form_fields_fieldset-b_container {
-        width: 100%;
+  .corpus_section_form_fields_fieldset-b_container {
+    width: 100%;
+    @include flex(
+      $dir: column,
+      $wrap: nowrap,
+      $jus: space-around,
+      $lig: flex-start
+    );
+    .corpus_section_form_fields_fieldset-b_container_select-container {
+      margin: 0.2rem 0;
+      width: 100%;
+      @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+      height: 6rem;
+      background-color: $grayA;
+      border: solid 2px white;
+      .corpus_section_form_fields_fieldset-b_container_select-container_select-list {
+        width: 40%;
         height: 100%;
-        @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-        .corpus_section_form_fields_fieldset-b_container_list-cont {
-            width: 100%;
-            margin: 1rem 0 2rem 0;
-            @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            label {
-                width: 100%;
-                text-align: left;
-                color: white;
-                font-weight: bold;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        select {
+          background-color: $grayB;
+          width: 200%;
+          height: 100%;
+          margin: 0 -200% 0 0;
+          padding: 0;
+          border: none;
+          @include flex(
+            $dir: column,
+            $wrap: nowrap,
+            $jus: space-around,
+            $lig: flex-start
+          );
+          option {
+            height: 33.33%;
+            color: white;
+            background-color: $grayA;
+            border: solid 4px $grayB;
+            border-right: none;
+            padding-right: 50%;
+            border-collapse: collapse;
+            @include flex(
+              $dir: row,
+              $wrap: nowrap,
+              $jus: flex-end,
+              $lig: center
+            );
+            &:hover {
+              background-color: $grayC;
             }
-            input {
-                align-self: flex-start;
-                width: 100%;
-            }
+          }
         }
-        .corpus_section_form_fields_fieldset-b_container_imag-des-cont {
-            width: 100%;
-            @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
+      }
+      .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container {
+        width: 60%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        @include flex(
+          $dir: column,
+          $wrap: nowrap,
+          $jus: space-between,
+          $lig: center
+        );
+        div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt {
+          width: 100%;
+          height: 33.33%;
+          border: solid 4px $grayB;
+          border-collapse: collapse;
+          border-left: none;
+          padding: 3px 0;
+          @include flex(
+            $dir: row,
+            $wrap: nowrap,
+            $jus: flex-start,
+            $lig: center
+          );
+          .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
+            &.empty {
+              width: 1rem;
+              border: solid 2px white;
+              border-radius: 100px;
+            }
+            height: 100%;
+            &:nth-of-type(1) {
+              margin: 0 5%;
+            }
+            img {
+              border: solid 1px white;
+              border-radius: 999px;
+              height: 100%;
+              padding: 2px;
+            }
+          }
         }
-        .corpus_section_form_fields_fieldset-b_container_des-cont {
-            width: 80%;
-            @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            margin-bottom: 2rem;
-            p.--des {
-                margin: 0;
-                padding: 0;
-                color: white;
-                &.itsHidden {
-                    opacity: 0;
-                }
-            }
-        }
-        .corpus_section_form_fields_fieldset-b_container_imag-cont {
-            width: 100%;
-            @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
-            .--helmet {
-                width: 100%;
-                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                .--helmet_img {
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-            .--plate {
-                padding-top: 1rem;
-                width: 100%;
-                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                .--plate_img {
-                    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                    width: 50px;
-                    height: 50px;
-                    background-image: url("./../icons/pole.svg");
-                    img {
-                        width: 70%;
-                    }
-                }
-            }
-            .--standart {
-                width: 100%;
-                @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                .--standart_img_bckg {
-                    width: 30px;
-                    border: solid white;
-                    border-width: 0 1px;
-                    height: 100%;
-                    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-                    padding: 1rem 0;
-                    img {
-                        width: 25px;
-                        height: 25px;
-                        border: solid 1px white;
-                        border-radius: 100px;
-                        background-color: $grayB;
-                    }
-                }
-                .--standart_img {
-                    width: 30px;
-                }
-            }
-        }
+      }
+      opacity: 0.1;
+      pointer-events: none;
+      &.enabled {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
+  }
 }
-
-.corpus_section_form_fields-2_fieldset-d {
-    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-    .corpus_section_form_fields-2_fieldset-d_container {
+.corpus_section_form_fields_fieldset-b {
+  .corpus_section_form_fields_fieldset-b_container {
+    width: 100%;
+    height: 100%;
+    @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
+    .corpus_section_form_fields_fieldset-b_container_list-cont {
+      width: 100%;
+      margin: 1rem 0 2rem 0;
+      @include flex(
+        $dir: column,
+        $wrap: nowrap,
+        $jus: flex-start,
+        $lig: center
+      );
+      label {
+        width: 100%;
+        text-align: left;
+        color: white;
+        font-weight: bold;
+      }
+      input {
+        align-self: flex-start;
+        width: 100%;
+      }
+    }
+    .corpus_section_form_fields_fieldset-b_container_imag-des-cont {
+      width: 100%;
+      @include flex(
+        $dir: column,
+        $wrap: nowrap,
+        $jus: flex-start,
+        $lig: center
+      );
+    }
+    .corpus_section_form_fields_fieldset-b_container_des-cont {
+      width: 80%;
+      @include flex(
+        $dir: column,
+        $wrap: nowrap,
+        $jus: flex-start,
+        $lig: center
+      );
+      margin-bottom: 2rem;
+      p.--des {
+        margin: 0;
+        padding: 0;
+        color: white;
+        &.itsHidden {
+          opacity: 0;
+        }
+      }
+    }
+    .corpus_section_form_fields_fieldset-b_container_imag-cont {
+      width: 100%;
+      @include flex(
+        $dir: column,
+        $wrap: nowrap,
+        $jus: flex-start,
+        $lig: center
+      );
+      .--helmet {
         width: 100%;
         @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-        .corpus_section_form_fields-2_fieldset-d_container_moce{
-            width: 100%;
-            @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
-            position: relative;
-            border: black 5px solid;
-            .moc {
-                width: 50%;
-                height: 100px;
-                background-color: $grayA;
-            }
-            .pietno{
-                width: 50%;
-                height: 100px;
-                background-color: $grayC;
-            }
-            .pieczec {
-                width: 40px;
-                height: 40px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -20px;
-                margin-left: -20px;
-                border-radius: 40px;
-                border: solid 1px white;
-                background-color: black;
-                @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
-                img {
-                    width:40px;
-                    height:40px; 
-                }
-            }
+        .--helmet_img {
+          width: 100px;
+          height: 100px;
         }
+      }
+      .--plate {
+        padding-top: 1rem;
+        width: 100%;
+        @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+        .--plate_img {
+          @include flex(
+            $dir: column,
+            $wrap: nowrap,
+            $jus: center,
+            $lig: center
+          );
+          width: 50px;
+          height: 50px;
+          background-image: url("./../icons/pole.svg");
+          img {
+            width: 70%;
+          }
+        }
+      }
+      .--standart {
+        width: 100%;
+        @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+        .--standart_img_bckg {
+          width: 30px;
+          border: solid white;
+          border-width: 0 1px;
+          height: 100%;
+          @include flex(
+            $dir: column,
+            $wrap: nowrap,
+            $jus: center,
+            $lig: center
+          );
+          padding: 1rem 0;
+          img {
+            width: 25px;
+            height: 25px;
+            border: solid 1px white;
+            border-radius: 100px;
+            background-color: $grayB;
+          }
+        }
+        .--standart_img {
+          width: 30px;
+        }
+      }
     }
+  }
+}
+.corpus_section_form_fields-2_fieldset-d {
+  @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+  .corpus_section_form_fields-2_fieldset-d_container {
+    width: 100%;
+    @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
+    .corpus_section_form_fields-2_fieldset-d_container_moce {
+      width: 100%;
+      @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+      position: relative;
+      border: black 5px solid;
+      .moc {
+        width: 50%;
+        height: 100px;
+        background-color: $grayA;
+      }
+      .pietno {
+        width: 50%;
+        height: 100px;
+        background-color: $grayC;
+      }
+      .pieczec {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -20px;
+        border-radius: 40px;
+        border: solid 1px white;
+        background-color: black;
+        @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+.corpus_section_form_fields-2_fieldset-d {
+  .corpus_section_form_fields-2_fieldset-d_container {
+    width: 100%;
+    @include flex(
+      $dir: column,
+      $wrap: nowrap,
+      $jus: flex-start,
+      $lig: flex-start
+    );
+    .corpus_section_form_fields-2_fieldset-d_container_atryb {
+      @include flex($dir: row, $wrap: wrap, $jus: flex-start, $lig: flex-start);
+      hr {
+        width: 90%;
+      }
+      h4 {
+        margin: 0.25rem 0 0.25rem 0;
+        color: white;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .corpus_section_form_fields-2_fieldset-d_container_atryb#zycie {
+      @include flex(
+        $dir: column,
+        $wrap: nowrap,
+        $jus: flex-start,
+        $lig: flex-start
+      );
+    }
+    .corpus_section_form_fields-2_fieldset-d_container_belt {
+      @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+      .--belt_icon-container {
+        margin-right: -25px;
+        width: 50px;
+        height: 50px;
+        border: solid 3px white;
+        background-color: black;
+        border-radius: 50px;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+        @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .--belt_body-container {
+        z-index: 0;
+        height: 50px;
+        @include flex($dir: row, $wrap: nowrap, $jus: flex-start, $lig: center);
+        .--belt_body-container_body {
+          padding-left: 30px;
+          @include flex(
+            $dir: row,
+            $wrap: nowrap,
+            $jus: flex-start,
+            $lig: center
+          );
+          height: 45px;
+          border: solid white;
+          border-width: 1px 0 1px 0;
+          background-color: $grayA;
+          transform: all 200ms;
+          img {
+            height: 35px;
+            width: 35px;
+            border: solid 1px white;
+            border-radius: 100px;
+            margin: 5px;
+          }
+        }
+      }
+      .--belt_ornament-container {
+        height: 45px;
+        width: 45px;
+        .--belt_ornament-container_body {
+          height: 45px;
+          width: 45px;
+          background-color: $grayA;
+          border-radius: 0 145px 145px 0;
+          border: solid white;
+          border-width: 1px 1px 1px 0;
+        }
+      }
+    }
+  }
 }
