@@ -1,8 +1,8 @@
 .corpus_section_form_fieldset-a_container_inp-lab-container {
   width: 30%;
   @include flex($dir: column, $wrap: nowrap, $jus: center, $lig: center);
-  background-color: $grayC;
-  border: solid 1px $grayA;
+  background-color: $grayA;
+  border: solid 1px $grayC;
   @media only screen and (max-width: 220mm) {
     width: 100%;
     margin: 1rem;
@@ -19,9 +19,10 @@
     height: 1.3rem;
     padding: 0.1rem;
     width: 100%;
-    background-color: $grayA;
+    background-color: $grayC;
     border: none;
     color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
 
