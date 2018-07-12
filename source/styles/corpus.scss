@@ -3,12 +3,35 @@ main {
     section {
         margin: 0 auto;
         width: 100%;
-        background-color: $grayB;
+        background-color: black;
         padding: 1rem;
         form {
             @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
             .corpus_section_form_ornament-top {
                 width: 90%;
+                opacity: 1;
+                margin-bottom: -1rem;
+            }
+            .corpus_section_form_ornament-marker {
+                width: 90%;
+                transform: rotate(180deg);
+                margin-bottom: -2.5rem;
+                opacity: 1;
+                z-index: 10;
+                &.itIsHidden{
+                    height: 0;
+                    opacity: 0;
+                    margin: 0;
+                }
+                &.itIsPassedThrought{
+                    height: 3.5rem;
+                    margin: 0;
+                    border: solid 1px #fff;
+                    border-top: none;
+                    border-bottom: none;
+                    background-color: $grayA;
+                    padding: 1rem;
+                }
             }
             legend,
             h2 {
@@ -70,19 +93,32 @@ main {
                 border: solid 1px white;
                 background-color:$grayB;
                 text-align: center;
+                color: white;
             }
             .corpus_section_form_fieldset-a {
                 width: 90%;
+                background-color: black;
                 .corpus_section_form_fieldset-a_container {
                     width: 100%;
                     @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
                 }
             }
             .corpus_section_form_fields {
+                &.itIsHidden {
+                    opacity: 0.1;
+                    pointer-events: none;
+                }
+                background-color: $grayA;
+                padding: 0.5%;
+                border: solid 1px #fff;
+                box-sizing: border-box;
+                border-top: none;
+                border-bottom: none;
                 margin: 0 0 0 0;
                 width: 90%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
                 .corpus_section_form_fields_fieldset-b {
+                    background-color: black;
                     width: 30%;
                     margin: 0;
                     padding-bottom: 3rem;
@@ -116,6 +152,10 @@ main {
                 }
             }
             .corpus_section_form_fieldset-c {
+                &.itIsHidden {
+                    opacity: 0.1;
+                    pointer-events: none;
+                }
                 margin: 0 0 0 0;
                 width: 90%;
                 div.corpus_section_form_fieldset-c_flexbox-container {
@@ -177,6 +217,10 @@ main {
                 }
             }
             .corpus_section_form_fields-2 {
+                &.itIsHidden {
+                    opacity: 0.1;
+                    pointer-events: none;
+                }
                 width: 90%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
                 .corpus_section_form_fields-2_fieldset-d {

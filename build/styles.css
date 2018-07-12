@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  background-color: saddlebrown;
   padding: 0;
   margin: 0;
 }
@@ -40,7 +39,7 @@ main {
 main section {
   margin: 0 auto;
   width: 100%;
-  background-color: #414141;
+  background-color: black;
   padding: 1rem;
 }
 
@@ -54,6 +53,32 @@ main section form {
 
 main section form .corpus_section_form_ornament-top {
   width: 90%;
+  opacity: 1;
+  margin-bottom: -1rem;
+}
+
+main section form .corpus_section_form_ornament-marker {
+  width: 90%;
+  transform: rotate(180deg);
+  margin-bottom: -2.5rem;
+  opacity: 1;
+  z-index: 10;
+}
+
+main section form .corpus_section_form_ornament-marker.itIsHidden {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+main section form .corpus_section_form_ornament-marker.itIsPassedThrought {
+  height: 3.5rem;
+  margin: 0;
+  border: solid 1px #fff;
+  border-top: none;
+  border-bottom: none;
+  background-color: #252525;
+  padding: 1rem;
 }
 
 main section form legend,
@@ -138,10 +163,12 @@ main section form h2 {
   border: solid 1px white;
   background-color: #414141;
   text-align: center;
+  color: white;
 }
 
 main section form .corpus_section_form_fieldset-a {
   width: 90%;
+  background-color: black;
 }
 
 main section form .corpus_section_form_fieldset-a .corpus_section_form_fieldset-a_container {
@@ -154,6 +181,12 @@ main section form .corpus_section_form_fieldset-a .corpus_section_form_fieldset-
 }
 
 main section form .corpus_section_form_fields {
+  background-color: #252525;
+  padding: 0.5%;
+  border: solid 1px #fff;
+  box-sizing: border-box;
+  border-top: none;
+  border-bottom: none;
   margin: 0 0 0 0;
   width: 90%;
   display: flex;
@@ -163,7 +196,13 @@ main section form .corpus_section_form_fields {
   align-items: stretch;
 }
 
+main section form .corpus_section_form_fields.itIsHidden {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b {
+  background-color: black;
   width: 30%;
   margin: 0;
   padding-bottom: 3rem;
@@ -208,6 +247,11 @@ main section form .corpus_section_form_fields .corpus_section_form_fields_fields
 main section form .corpus_section_form_fieldset-c {
   margin: 0 0 0 0;
   width: 90%;
+}
+
+main section form .corpus_section_form_fieldset-c.itIsHidden {
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container {
@@ -301,6 +345,11 @@ main section form .corpus_section_form_fields-2 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
+}
+
+main section form .corpus_section_form_fields-2.itIsHidden {
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fieldset-d {
