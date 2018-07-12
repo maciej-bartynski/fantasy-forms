@@ -406,12 +406,7 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
   height: 100%;
-}
-
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner.empty {
-  width: 1rem;
-  border: solid 2px white;
-  border-radius: 100px;
+  width: 30px;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner:nth-of-type(1) {

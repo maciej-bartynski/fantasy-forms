@@ -138,12 +138,9 @@
             $lig: center
           );
           .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt_img-positioner {
-            &.empty {
-              width: 1rem;
-              border: solid 2px white;
-              border-radius: 100px;
-            }
+            
             height: 100%;
+            width: 30px;
             &:nth-of-type(1) {
               margin: 0 5%;
             }
