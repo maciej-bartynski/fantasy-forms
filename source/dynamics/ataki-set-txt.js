@@ -1,6 +1,7 @@
 'use strict'
 document.addEventListener('DOMContentLoaded', initialize)
-function initialize () {
+
+function initialize() {
   let opts = document.querySelectorAll(
     '.corpus_section_form_fields_fieldset-b_container_select-container_select-list option'
   )
@@ -17,14 +18,16 @@ function initialize () {
   }
 }
 let onlyOnce = 0
-function enableStrikeNamePart () {
+
+function enableStrikeNamePart() {
   onlyOnce++
   if (onlyOnce === 1) {
     let item = document.querySelector('.strikeName')
     item.classList.remove('strikeName')
   }
 }
-function setPartOfAttackDescription (i) {
+
+function setPartOfAttackDescription(i) {
   let desPart = document.querySelector('p span.--des_epitet')
   desPart.classList.remove('itsHidden')
   let array = [
@@ -49,7 +52,8 @@ function setPartOfAttackDescription (i) {
   ]
   desPart.innerText = ', ' + array[i]
 }
-function setIMG (i) {
+
+function setIMG(i) {
   let belt = document.querySelectorAll(
     '.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt'
   )[i]
@@ -73,25 +77,29 @@ function setIMG (i) {
     }
   }
 }
-function setStrikeNameToDes (i) {
+
+function setStrikeNameToDes(i) {
   let inp = document.querySelector('input[name="nazwauderzenia"]')
-  inp.addEventListener('change', function () {
-    let strName = inp.value
-    let item = document.querySelector('.--des_nazwa-ciosu')
-    item.innerText = strName + ' to legendarne'
-    showAllDes()
+  inp.addEventListener('keyup', function () {
+    let strName = inp.value;
+    let item = document.querySelector('.--des_nazwa-ciosu');
+    item.innerText = strName + ' to legendarne';
+    showAllDes();
+    setNextPartOfFormula();
   })
-  inp.addEventListener('click', function () {
+  inp.addEventListener('change', function () {
     let itm = inp.value
     if (itm.trim() !== '') {
       let strName = inp.value
       let item = document.querySelector('.--des_nazwa-ciosu')
       item.innerText = strName + ' to legendarne'
-      showAllDes()
+      showAllDes();
+      setNextPartOfFormula();
     }
   })
 }
-function setForceDes (i) {
+
+function setForceDes(i) {
   let belt = document.querySelectorAll(
     '.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt'
   )[i];
@@ -138,26 +146,49 @@ function setForceDes (i) {
   zdaDes.classList.remove('itsHidden');
   zywDes.innerText = stringToSet + '.';
 }
-export function setNameToDes () {
+export function setNameToDes() {
   let inp = document.querySelector('input[name="imie"]')
   let nam = inp.value
   let item = document.querySelector('.--des_imie')
   item.innerText = nam + ' ';
   item.classList.remove('itsHidden')
 }
-export function setNicknameToDes () {
+export function setNicknameToDes() {
   let inpB = document.querySelector('input[name="przydomek"]')
   let surnam = inpB.value
   let item = document.querySelector('.--des_przydomek')
   item.innerText = surnam;
   item.classList.remove('itsHidden')
 }
-export function setSentenceToDes () {
+export function setSentenceToDes() {
   let item = document.querySelector('.--des_zdanie')
   item.innerText = ' wzmacnia swój atak '
   item.classList.remove('itsHidden')
 }
-function showAllDes () {
+
+function showAllDes() {
   let allDes = document.querySelector('.--des')
   allDes.classList.remove('itsHidden')
+}
+
+function setNextPartOfFormula() {
+  let textArea = document.querySelector('input[name="nazwauderzenia"]');
+  let areaValue = (textArea.value).trim();
+  if (areaValue !== '') {
+    enableNextPartOfForm();
+  }
+}
+
+function enableNextPartOfForm() {
+  let nextPart = document.querySelector('.corpus_section_form_fieldset-c');
+  nextPart.classList.remove('itIsHidden');
+  let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
+  let thisOrnament = allOrnaments[1];
+  thisOrnament.setAttribute('src', './icons/pole.svg');
+  thisOrnament.classList.add('itIsPassedThrought');
+  let nextOrnament = allOrnaments[2];
+  nextOrnament.classList.remove('itIsHidden');
+  thisOrnament.style.marginBottom="-1rem";
+  thisOrnament.style.zIndex="1";
+  nextPart.style.zIndex="2";
 }
