@@ -7,15 +7,20 @@ function chooseYourAvatar () {
   for (let i = 0;i < amount;i++) {
     let item = avatars[i]
     item.addEventListener('click', function () {
-      chooseThisAvatar(item)
+      chooseThisAvatar(item, avatars, amount)
       setOnePartOfAttackDescription(i)
       synchronizeBackgroundsOfOtherOpts(containers)
       enableAttacks(i)
     })
   }
 }
-function chooseThisAvatar (item) {
-  item.querySelector('input').checked = true
+function chooseThisAvatar (item, avatars, amount) {
+  item.querySelector('input').checked = true;
+  for (let i=0; i<amount; i++){
+      let av = avatars[i];
+      av.classList.remove('isClicked');
+  }
+  item.classList.add('isClicked');
 }
 function setOnePartOfAttackDescription (i) {
   let desPart = document.querySelector('p span.--des_klasa')

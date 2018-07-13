@@ -51,6 +51,9 @@
             input {
                 order: 1;
             }
+            &.isClicked {
+                border: solid 1px white;
+            }
         }
     }
 }
@@ -136,6 +139,10 @@
 
 .corpus_section_form_fields_fieldset-b {
     .corpus_section_form_fields_fieldset-b_container {
+        &.strikeName {
+            pointer-events: none;
+            opacity: 0.1;
+        }
         width: 100%;
         height: 100%;
         @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
@@ -167,16 +174,17 @@
                 padding: 0;
                 color: white;
                 border: solid 1px white;
-                border-left: none; border-right: none;
+                border-left: none;
+                border-right: none;
                 &.itsHidden {
                     opacity: 0;
                     border: none;
                 }
                 span {
-                  font-size: 1rem;
-                  &.itsHidden {
-                    font-size: 0;
-                  }
+                    font-size: 1rem;
+                    &.itsHidden {
+                        font-size: 0;
+                    }
                 }
             }
         }

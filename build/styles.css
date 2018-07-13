@@ -438,6 +438,10 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   order: 1;
 }
 
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_radio-lab-container.isClicked {
+  border: solid 1px white;
+}
+
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container {
   width: 100%;
   display: flex;
@@ -558,6 +562,11 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container.strikeName {
+  pointer-events: none;
+  opacity: 0.1;
 }
 
 .corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_list-cont {
