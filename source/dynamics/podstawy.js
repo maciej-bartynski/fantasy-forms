@@ -1,4 +1,7 @@
-'use strict'
+import {setNameToDes} from './ataki-set-txt.js';
+import {setNicknameToDes} from './ataki-set-txt.js';
+import {setSentenceToDes} from './ataki-set-txt.js';
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   userFlowViaFirstFieldset()
 })
@@ -18,6 +21,7 @@ function userNameAccept (item, nextItem) {
     } else if (event.keyCode === 13) {
       nextItem.focus()
     }
+    setThisDataToDescription();
   })
 }
 function userNickAccept (item, nextItem) {
@@ -28,6 +32,7 @@ function userNickAccept (item, nextItem) {
     } else if (event.keyCode === 13) {
       nextItem.focus()
     }
+    setThisDataToDescription();
   })
 }
 function userMottoAccept (item, nextItem) {
@@ -38,6 +43,7 @@ function userMottoAccept (item, nextItem) {
     } else if (event.keyCode === 13) {
       nextItem.focus()
     }
+    setThisDataToDescription();
   })
 }
 function checkIfFieldsAreSet() {
@@ -64,4 +70,9 @@ function enableNextPartOfFormula(){
     nextOrnament.classList.remove('itIsHidden');
     let partOfForm = document.querySelector('.corpus_section_form_fields');
     partOfForm.classList.remove('itIsHidden');
+}
+function setThisDataToDescription(){
+  setNameToDes();
+  setNicknameToDes();
+  setSentenceToDes();
 }

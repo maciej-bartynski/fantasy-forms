@@ -94,7 +94,7 @@ function setStrikeNameToDes (i) {
 function setForceDes (i) {
   let belt = document.querySelectorAll(
     '.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt'
-  )[i]
+  )[i];
   let IMGs = belt.querySelectorAll('img')
   let iter = IMGs.length
   let strng = []
@@ -127,19 +127,34 @@ function setForceDes (i) {
       }
     }
   }
-  setNameToDes()
-  let stringToSet = strng.join(', ')
-  let spnDes = document.querySelector('.--des_zywiol')
-  spnDes.classList.remove('itsHidden')
-  spnDes.innerText = stringToSet + '.'
+  let stringToSet = strng.join(', ');
+  let zywDes = document.querySelector('.--des_zywiol');
+  let imiDes = document.querySelector('.--des_imie');
+  let przDes = document.querySelector('.--des_przydomek');
+  let zdaDes = document.querySelector('.--des_zdanie');
+  zywDes.classList.remove('itsHidden');
+  imiDes.classList.remove('itsHidden');
+  przDes.classList.remove('itsHidden');
+  zdaDes.classList.remove('itsHidden');
+  zywDes.innerText = stringToSet + '.';
 }
-function setNameToDes () {
+export function setNameToDes () {
   let inp = document.querySelector('input[name="imie"]')
   let nam = inp.value
+  let item = document.querySelector('.--des_imie')
+  item.innerText = nam + ' ';
+  item.classList.remove('itsHidden')
+}
+export function setNicknameToDes () {
   let inpB = document.querySelector('input[name="przydomek"]')
   let surnam = inpB.value
-  let item = document.querySelector('.--des_imie')
-  item.innerText = nam + ' ' + surnam + ' wzmacnia swój atak '
+  let item = document.querySelector('.--des_przydomek')
+  item.innerText = surnam;
+  item.classList.remove('itsHidden')
+}
+export function setSentenceToDes () {
+  let item = document.querySelector('.--des_zdanie')
+  item.innerText = ' wzmacnia swój atak '
   item.classList.remove('itsHidden')
 }
 function showAllDes () {

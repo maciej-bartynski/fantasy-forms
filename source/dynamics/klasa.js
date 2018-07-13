@@ -33,12 +33,16 @@ function setOnePartOfAttackDescription (i) {
     ' uderzenie bronią lub czymkolwiek, co wpadnie karłowi w łapska.'
   ]
   desPart.innerText = array[i]
-  let nextDesPart = document.querySelector('p span.--des_epitet')
-  nextDesPart.classList.add('itsHidden')
-  let anotherNextDesPart = document.querySelector('.--des_zywiol')
-  anotherNextDesPart.classList.add('itsHidden')
-  let otherAnotherNextDesPart = document.querySelector('.--des_imie')
-  otherAnotherNextDesPart.classList.add('itsHidden')
+  let nextDesPart = document.querySelector('p span.--des_epitet');
+  nextDesPart.classList.add('itsHidden');
+  let anotherNextDesPart = document.querySelector('.--des_zywiol');
+  anotherNextDesPart.classList.add('itsHidden');
+  let otherAnotherNextDesPart = document.querySelector('.--des_imie');
+  otherAnotherNextDesPart.classList.add('itsHidden');
+  let przDes = document.querySelector('.--des_przydomek');
+  let zdaDes = document.querySelector('.--des_zdanie');
+  przDes.classList.add('itsHidden');
+  zdaDes.classList.add('itsHidden');
 }
 function synchronizeBackgroundsOfOtherOpts (containers) {
   let amount = containers.length
