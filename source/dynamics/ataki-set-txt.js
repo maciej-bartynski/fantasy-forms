@@ -8,13 +8,16 @@ function initialize () {
   for (let i = 0; i < amount; i++) {
     let item = opts[i]
     item.addEventListener('click', function () {
-      setIMG(i)
-      setStrikeNameToDes(i)
+      setIMG(i);
+      setStrikeNameToDes(i);
+      setPartOfAttackDescription(i);
+      setForceDes(i);
     })
   }
 }
-function setPartOfAttackDescription (i) {
-  let desPart = document.querySelector('p span.--des_epitet')
+function setPartOfAttackDescription(i) {
+  let desPart = document.querySelector('p span.--des_epitet');
+  desPart.classList.remove('itsHidden');
   let array = [
     'brutalne',
     'nieprzewidywalne',
@@ -35,7 +38,7 @@ function setPartOfAttackDescription (i) {
     'wspierane mocą otchłani',
     'przesycone złą mocą'
   ]
-  desPart.innerText = array[i]
+  desPart.innerText =', '+array[i];
 }
 function setIMG (i) {
   let belt = document.querySelectorAll(
@@ -61,35 +64,21 @@ function setIMG (i) {
     }
   }
 }
-function setNameToDes () {
-  let inp = document.querySelector('input[name="imie"]')
-  let nam = inp.value
-  let inpB = document.querySelector('input[name="przydomek"]')
-  let surnam = inpB.value
-  let item = document.querySelector('.--des_imie')
-  item.innerText = nam + ' ' + surnam
-}
 function setStrikeNameToDes (i) {
   let inp = document.querySelector('input[name="nazwauderzenia"]')
   inp.addEventListener('change', function () {
     let strName = inp.value
-    let item = document.querySelector('.--des_nazwa-ciosu')
-    item.innerText = strName
-    setPartOfAttackDescription(i)
-    setNameToDes()
-    setForceDes(i)
-    showAllDes()
+    let item = document.querySelector('.--des_nazwa-ciosu');
+    item.innerText = strName + ' to legendarne';
+    showAllDes();
   })
   inp.addEventListener('click', function () {
     let itm = inp.value
     if (itm.trim() !== '') {
       let strName = inp.value
       let item = document.querySelector('.--des_nazwa-ciosu')
-      item.innerText = strName
-      setPartOfAttackDescription(i)
-      setNameToDes()
-      setForceDes(i)
-      showAllDes()
+      item.innerText = strName + ' to legendarne';
+      showAllDes();
     }
   })
 }
@@ -129,9 +118,20 @@ function setForceDes (i) {
       }
     }
   }
-  let stringToSet = strng.join(', ')
-  let spnDes = document.querySelector('.--des_zywiol')
+  setNameToDes();
+  let stringToSet = strng.join(', ');
+  let spnDes = document.querySelector('.--des_zywiol');
+  spnDes.classList.remove('itsHidden');
   spnDes.innerText = stringToSet + '.'
+}
+function setNameToDes () {
+  let inp = document.querySelector('input[name="imie"]');
+  let nam = inp.value;
+  let inpB = document.querySelector('input[name="przydomek"]');
+  let surnam = inpB.value;
+  let item = document.querySelector('.--des_imie');
+  item.innerText = nam + ' ' + surnam + ' wzmacnia swój atak ';
+  item.classList.remove('itsHidden');
 }
 function showAllDes () {
   let allDes = document.querySelector('.--des')

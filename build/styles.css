@@ -605,10 +605,22 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   margin: 0;
   padding: 0;
   color: white;
+  border: solid 1px white;
+  border-left: none;
+  border-right: none;
 }
 
 .corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_des-cont p.--des.itsHidden {
   opacity: 0;
+  border: none;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_des-cont p.--des span {
+  font-size: 1rem;
+}
+
+.corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_des-cont p.--des span.itsHidden {
+  font-size: 0;
 }
 
 .corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_imag-cont {
