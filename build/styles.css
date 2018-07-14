@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  padding: 0;
+  padding: 0 0 -5rem 0;
   margin: 0;
+  background-color: black;
 }
 
 header.head {
@@ -318,6 +319,10 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
   width: 15%;
 }
 
+main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img.itIsUnselected {
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 700px) {
   main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
     width: 30%;
@@ -339,7 +344,12 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
 }
 
 main section form .corpus_section_form_fields-2 {
+  background-color: #252525;
+  border: solid 1px white;
+  border-top: none;
+  border-bottom: none;
   width: 90%;
+  padding: 0.5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -354,6 +364,7 @@ main section form .corpus_section_form_fields-2.itIsHidden {
 
 main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fieldset-d {
   width: 47%;
+  background-color: black;
 }
 
 @media only screen and (max-width: 220mm) {
@@ -739,7 +750,19 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   justify-content: center;
   align-items: center;
   position: relative;
-  border: black 5px solid;
+  border: black 1px solid;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce:hover {
+  border: white 1px solid;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce:active {
+  border: gray 1px solid;
+}
+
+.corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce.itIsHidden {
+  opacity: 0.3;
 }
 
 .corpus_section_form_fields-2_fieldset-d .corpus_section_form_fields-2_fieldset-d_container .corpus_section_form_fields-2_fieldset-d_container_moce .moc {

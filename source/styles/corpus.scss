@@ -196,6 +196,9 @@ main {
                         $jus: space-around,
                         $lig: stretch);
                         .corpus_section_form_fieldset-c_imgs_img {
+                            &.itIsUnselected {
+                                opacity: 0.5;
+                            }
                             width: 15%;
                             @media only screen and (max-width: 700px) {
                                 width: 30%;
@@ -221,10 +224,15 @@ main {
                     opacity: 0.1;
                     pointer-events: none;
                 }
+                background-color: $grayA;
+                border: solid 1px white;
+                border-top: none; border-bottom: none;
                 width: 90%;
+                padding: 0.5%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
                 .corpus_section_form_fields-2_fieldset-d {
                     width: 47%;
+                    background-color: black;
                     @media only screen and (max-width: 220mm) {
                         width: 100%;
                     }

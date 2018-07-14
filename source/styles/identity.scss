@@ -248,7 +248,16 @@
             width: 100%;
             @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
             position: relative;
-            border: black 5px solid;
+            border: black 1px solid;
+            &:hover {
+                border: white 1px solid;
+            }
+            &:active {
+                border: gray 1px solid;
+            }
+            &.itIsHidden {
+                opacity: 0.3;
+            }
             .moc {
                 width: 50%;
                 height: 100px;
