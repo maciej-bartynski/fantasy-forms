@@ -1,6 +1,6 @@
 aside {
-    width: 100px;
-    height: 100px;
+    transition: all 500ms;
+    min-width: 100px;
     border: 1px solid white;
     background-color: gray;
     position: fixed;
@@ -35,8 +35,41 @@ aside {
     }
     .aside-body {
         width: 100%;
+        @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+        padding-left: 1%;
+        color: white;
+        font-family: sans-serif;
+        img {
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            border-radius: 30px;
+            background-color: black;
+            border: solid 1px white;
+        }
     }
     .aside-foot {
         width: 100%;
+        @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        .user-guide{
+            max-width: 300px;
+            padding: 5px;
+            margin: 0;
+        }
+        .user-guide_hide {
+            @include flex($dir: column, $wrap: wrap, $jus: center, $lig: center);
+            width: 50%;
+            border: solid 1px white;
+            background-color: $grayA;
+            margin: 0;
+            padding: 1px;
+            text-align: center;
+            border-radius: 3px;
+            &:hover{
+                background-color: $grayB;   
+            }
+        }
     }
 }
