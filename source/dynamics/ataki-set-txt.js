@@ -78,7 +78,7 @@ function setIMG(i) {
     }
   }
 }
-
+let setNextPartOfFormulaForTheFirstTime=0;
 function setStrikeNameToDes(i) {
   let inp = document.querySelector('input[name="nazwauderzenia"]')
   inp.addEventListener('keyup', function () {
@@ -86,16 +86,16 @@ function setStrikeNameToDes(i) {
     let item = document.querySelector('.--des_nazwa-ciosu');
     item.innerText = strName + ' to legendarne';
     showAllDes();
-    setNextPartOfFormula();
   })
   inp.addEventListener('change', function () {
     let itm = inp.value
-    if (itm.trim() !== '') {
+    if (itm.trim() !== ''&&setNextPartOfFormulaForTheFirstTime===0) {
       let strName = inp.value
       let item = document.querySelector('.--des_nazwa-ciosu')
       item.innerText = strName + ' to legendarne'
       showAllDes();
       setNextPartOfFormula();
+      setNextPartOfFormulaForTheFirstTime=1;
     }
   })
 }

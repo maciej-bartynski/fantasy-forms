@@ -533,17 +533,33 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   text-align: left;
   align-self: flex-start;
   padding: 0.1rem 0 0.1rem 0.2rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  font-family: sans-serif;
 }
 
-.corpus_section_form_fieldset-a_container_inp-lab-container input,
-.corpus_section_form_fieldset-a_container_inp-lab-container textarea {
+.corpus_section_form_fieldset-a_container_inp-lab-container input {
   height: 1.3rem;
   padding: 0.1rem;
   width: 100%;
   background-color: gray;
   border: none;
-  color: white;
+  color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.corpus_section_form_fieldset-a_container_inp-lab-container input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.corpus_section_form_fieldset-a_container_inp-lab-container input:-ms-input-placeholder {
+  color: black;
+}
+
+.corpus_section_form_fieldset-a_container_inp-lab-container input::-ms-input-placeholder {
+  color: black;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container {
