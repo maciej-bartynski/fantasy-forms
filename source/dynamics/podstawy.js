@@ -1,6 +1,7 @@
 import {setNameToDes} from './ataki-set-txt.js';
 import {setNicknameToDes} from './ataki-set-txt.js';
 import {setSentenceToDes} from './ataki-set-txt.js';
+import {guideReacts} from './aside.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   userFlowViaFirstFieldset()
@@ -70,6 +71,7 @@ function enableNextPartOfFormula(){
     nextOrnament.classList.remove('itIsHidden');
     let partOfForm = document.querySelector('.corpus_section_form_fields');
     partOfForm.classList.remove('itIsHidden');
+    guideReacts (1);
 }
 function setThisDataToDescription(){
   setNameToDes();

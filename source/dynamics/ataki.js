@@ -1,5 +1,5 @@
 import iteratorOfPointsLeft from './aside.js';
-
+import {guideReacts} from './aside.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', initializeAttacksPart);
 
@@ -28,6 +28,7 @@ function initializeAttacksPart() {
             };
             opt.addEventListener('click', function () {
                 iteratorOfPointsLeft.iterator(cont, x);
+                guideReacts(3);
                 synchronizeBackgroundsOfOtherOptns(cont, iter);
                 synchronizeThisBckgrWithImageBeltHoverBckgr(opt, cont, x, true);
             });

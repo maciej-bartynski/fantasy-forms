@@ -1,4 +1,5 @@
 import iteratorOfPointsLeft from './aside.js';
+import {guideReacts} from './aside.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', chooseYourAvatar)
 function chooseYourAvatar () {
@@ -23,6 +24,7 @@ function chooseThisAvatar (item, avatars, amount) {
   }
   item.classList.add('isClicked');
   iteratorOfPointsLeft.deletator();
+  guideReacts(2);
 }
 function setOnePartOfAttackDescription (i) {
   let desPart = document.querySelector('p span.--des_klasa')

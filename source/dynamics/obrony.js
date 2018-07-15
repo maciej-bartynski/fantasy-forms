@@ -1,3 +1,4 @@
+import {guideReacts} from './aside.js';
 "use strict";
 document.addEventListener("DOMContentLoaded", initializeThisSection);
 
@@ -50,5 +51,6 @@ function enableNextFormPart(list, otherList) {
         thisOrnament.classList.add('itIsPassedThrought');
         let nextOrnament = allOrnaments[3];
         nextOrnament.classList.remove('itIsHidden');
+        guideReacts(5);
     }
 }

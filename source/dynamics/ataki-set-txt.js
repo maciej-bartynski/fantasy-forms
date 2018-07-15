@@ -27,6 +27,7 @@ function enableStrikeNamePart() {
   }
 }
 
+import {guideReacts} from './aside.js';
 function setPartOfAttackDescription(i) {
   let desPart = document.querySelector('p span.--des_epitet')
   desPart.classList.remove('itsHidden')
@@ -191,4 +192,5 @@ function enableNextPartOfForm() {
   thisOrnament.style.marginBottom="-1rem";
   thisOrnament.style.zIndex="1";
   nextPart.style.zIndex="2";
+  guideReacts(4);
 }

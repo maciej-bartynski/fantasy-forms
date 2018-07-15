@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', initializeGuide)
 
 function initializeGuide () {
-  hideUserGuide()
-  changeGuide()
-  //pointsIterator()
+  hideUserGuide();
+  //changeGuide();
 }
 function hideUserGuide () {
   let ornm = document.querySelector('.aside-head')
@@ -32,16 +31,17 @@ function rotateAndHideAside () {
     controller = 0
   }
 }
-function changeGuide () {
-  let guide = document.querySelector('.aside-foot .user-guide')
-  let parts = document.querySelectorAll('fieldset')
+/*function changeGuide () {
+  let parts = document.querySelectorAll('fieldset');
   for (let i = 0;i <= 6;i++) {
     parts[i].addEventListener('mouseenter', function () {
-      guideReacts(i, guide)
+      guideReacts(i);
     })
   }
-}
-function guideReacts (i, guide) {
+}*/
+export function guideReacts (i) {
+  let guide = document.querySelector('.aside-foot .user-guide');
+  let title = document.querySelector('.aside-foot_title');
   let arr = [
     'Gdy wpiszesz imię, przydomek i zawołanie, po zatwierdzeniu zmian pojawi się następna część formularza.',
     'Po wyborze klasy, pojawi sie okno wyboru ataku spośród uderzeń charakterystycznych dla tej postaci.',
@@ -50,8 +50,18 @@ function guideReacts (i, guide) {
     'Po wyborze jednej opcji z każdej listy, pojawi sie kolejna cześć karty postaci.',
     'Kliknij tyle opcji, ile chcesz. Każdy zestaw (czyli moc i pietno) zabiera ci pewną ilość punktów Mądrości.',
     'Rozdaj pozostałe punkty mądrości na współczynniki postaci: Życie, Mądrość, Ruch i Działanie.'
-  ]
-  guide.innerText = arr[i]
+  ];
+  guide.innerText = arr[i];
+  let arrB = [
+    'tożsamość:',
+    'klasa:',
+    'atak:',
+    'nazwa ataku:',
+    'obrona:',
+    'zdolność i słabość',
+    'atrybuty:'
+  ];
+  title.innerText = arrB[i];
 }
 
 var iteratorOfPointsLeft = {
@@ -71,6 +81,20 @@ var iteratorOfPointsLeft = {
     let iterDevice = document.querySelector('.aside-body_how-much');
     this.left = this.left + this.spentOnAttack;
     this.spentOnAttack=0;
+    iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x';
+  },
+  iteratorB(integer) {
+    let iterDevice = document.querySelector('.aside-body_how-much');
+    this.left = this.left+integer;
+    iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x';
+  },
+  deletatorB(integer){
+    let iterDevice = document.querySelector('.aside-body_how-much');
+    this.left = this.left-integer;
+    iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x';
+  },
+  equalizator(){
+    let iterDevice = document.querySelector('.aside-body_how-much');
     iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x';
   }
 }

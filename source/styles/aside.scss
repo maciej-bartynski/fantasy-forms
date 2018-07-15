@@ -58,6 +58,15 @@ aside {
         @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
         color: white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        .aside-foot_title {
+            align-self: flex-start;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            padding: 5px;
+            margin: 1rem 0 0 0;
+        }
         .user-guide{
             max-width: 300px;
             padding: 5px;
@@ -68,8 +77,13 @@ aside {
             width: 50%;
             border: solid 1px white;
             background-color: $grayA;
-            margin: 0;
-            padding: 1px;
+            margin: 5px 0;
+            padding: 0.1rem 1px 0.4rem 1px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            padding: 5px;
             text-align: center;
             border-radius: 3px;
             user-select: none;

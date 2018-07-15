@@ -1,3 +1,5 @@
+import iteratorOfPointsLeft from './aside.js';
+import {guideReacts} from './aside.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', initializeThisSelect)
 
@@ -13,10 +15,14 @@ function initializeThisSelect() {
 }
 function itIsClicked(opt, opts, iter, i) {
     let checks = document.querySelectorAll('input[name="moc-pietno"]');
+    let costOfThis = [1,2,2,1,3,1];
     if (checks[i].checked===true){
         checks[i].checked=false;
+        iteratorOfPointsLeft.iteratorB(costOfThis[i]);
     }else{
         checks[i].checked=true;
+        iteratorOfPointsLeft.deletatorB(costOfThis[i]);
+        guideReacts(6);
     }
     for (let j = 0; j < iter; j++) {
         if (checks[j].checked === true) {

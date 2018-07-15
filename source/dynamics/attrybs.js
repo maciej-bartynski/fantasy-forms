@@ -1,6 +1,6 @@
+import iteratorOfPointsLeft from './aside.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', init);
-let amountOfPoints = 20;
 
 function init() {
     let btns = document.querySelectorAll('.corpus_section_form_fields-2_fieldset-d_container_atryb .--belt_icon-container');
@@ -11,7 +11,7 @@ function init() {
             let attryb = btns[i];
             let belt = belts[i];
             attryb.addEventListener('click', function () {
-                if (amountOfPoints > 0) {
+                if (iteratorOfPointsLeft.left > 0) {
                     addPoint(belt)
                 }
             });
@@ -23,7 +23,9 @@ function addPoint(belt) {
     let IMG = document.createElement('IMG');
     IMG.setAttribute('src', 'icons/ikona-poteg.svg');
     belt.appendChild(IMG);
-    amountOfPoints--;
+    //amountOfPoints--;
+    iteratorOfPointsLeft.left--;
+    iteratorOfPointsLeft.equalizator();
     IMG.addEventListener('click', function () {
         deleteThisIMG(IMG)
     })
@@ -31,5 +33,7 @@ function addPoint(belt) {
 
 function deleteThisIMG(x) {
     x.remove();
-    amountOfPoints++;
+    //amountOfPoints++;
+    iteratorOfPointsLeft.left++;
+    iteratorOfPointsLeft.equalizator();
 }
