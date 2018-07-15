@@ -1,4 +1,5 @@
-'use strict'
+import iteratorOfPointsLeft from './aside.js';
+'use strict';
 document.addEventListener('DOMContentLoaded', chooseYourAvatar)
 function chooseYourAvatar () {
   let containers = document.querySelectorAll('.corpus_section_form_fields_fieldset-b_container_select-container')
@@ -21,6 +22,7 @@ function chooseThisAvatar (item, avatars, amount) {
       av.classList.remove('isClicked');
   }
   item.classList.add('isClicked');
+  iteratorOfPointsLeft.deletator();
 }
 function setOnePartOfAttackDescription (i) {
   let desPart = document.querySelector('p span.--des_klasa')

@@ -12,3 +12,4 @@ import './dynamics/ataki-set-txt.js';
 import './dynamics/attrybs.js';
 import './dynamics/obrony.js';
 import './dynamics/moce.js';
+import './dynamics/aside.js';

@@ -1,3 +1,5 @@
+import iteratorOfPointsLeft from './aside.js';
+
 'use strict';
 document.addEventListener('DOMContentLoaded', initializeAttacksPart);
 
@@ -25,6 +27,7 @@ function initializeAttacksPart() {
                 }
             };
             opt.addEventListener('click', function () {
+                iteratorOfPointsLeft.iterator(cont, x);
                 synchronizeBackgroundsOfOtherOptns(cont, iter);
                 synchronizeThisBckgrWithImageBeltHoverBckgr(opt, cont, x, true);
             });

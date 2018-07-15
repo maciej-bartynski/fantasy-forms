@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', initializeThisSelect)
 
 function initializeThisSelect() {
-    hideUserGuide();
     let options = document.querySelectorAll('.corpus_section_form_fields-2_fieldset-d_container_moce');
     let iter = options.length;
     for (let i = 0; i < iter; i++) {
@@ -26,22 +25,5 @@ function itIsClicked(opt, opts, iter, i) {
         if (checks[j].checked === false) {
             opts[j].classList.add('itIsHidden');
         }
-    }
-}
-function hideUserGuide(){
-    let btn = document.querySelector('.user-guide_hide');
-    btn.addEventListener('click', rotateAndHideAside);
-}
-let controller=0;
-function rotateAndHideAside(){
-    let aside = document.querySelector('aside');
-    if(controller===0){
-        aside.style.transform="rotate(90deg)";
-        aside.style.left="-150px";
-        aside.style.top="10px";
-        controller = 1;
-    }else if(controller===1){
-        aside.style.transform="rotate(0deg)";
-        controller = 0;
     }
 }
