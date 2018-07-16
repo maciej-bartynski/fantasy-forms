@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', initializeGuide)
 
 function initializeGuide () {
-  hideUserGuide()
+  hideUserGuide();
+  setTimeout(function(){
+    let aside = document.querySelector('aside');
+    aside.classList.add('onLoad');
+  }, 0)
 }
 
 function hideUserGuide () {
@@ -11,39 +15,39 @@ function hideUserGuide () {
   btn.addEventListener('click', rotateAndHideAside)
 }
 let controller = 0
-
 function rotateAndHideAside () {
   let aside = document.querySelector('aside')
   if (controller === 0) {
+    let headBelt = aside.querySelector('.aside-head');
+    let piece = headBelt.offsetHeight;
     aside.style.transform = 'rotate(90deg)'
     let aw = aside.offsetWidth
     let ah = aside.offsetHeight
     let wsp = ah + ((aw - ah) / 2)
-    let x = (wsp * -1) + 20
+    let x = (wsp * -1) + piece
     let y = x + 'px'
     let z = ((aw - ah) / 2) + 'px'
     aside.style.left = y
-    aside.style.top = z
+    aside.style.bottom = z
     controller = 1
   } else if (controller === 1) {
     aside.style.transform = 'rotate(0deg)'
     aside.style.left = 0
-    aside.style.top = 0
+    aside.style.bottom = 0
     controller = 0
   }
 }
 let arrayWithIters = [0, 0, 0, 0, 0, 0, 0]
 export function guideReacts (i) {
+  let aside = document.querySelector('aside');
+  aside.classList.remove('onAdvice');
+  aside.classList.remove('onAdviceB');
   let parts = document.querySelectorAll('fieldset')
   let currentPart = parts[i]
   let position = currentPart.offsetTop
   if (arrayWithIters[i] === 0) {
     window.scrollTo(0, position)
     arrayWithIters[i] = 1
-    if (controller === 1) {
-      rotateAndHideAside()
-    }
-
     let guide = document.querySelector('.aside-foot .user-guide')
     let title = document.querySelector('.aside-foot_title')
     let arr = [
@@ -66,9 +70,30 @@ export function guideReacts (i) {
       'atrybuty:'
     ]
     title.innerText = arrB[i]
+    isSomethingNewToSay();
   }
 }
-
+function isSomethingNewToSay(){
+  let aside = document.querySelector('aside');
+  
+  if (controller===1){
+    let headBelt = aside.querySelector('.aside-head');
+    let piece = headBelt.offsetHeight;
+    aside.style.transform = 'rotate(90deg)'
+    let aw = aside.offsetWidth
+    let ah = aside.offsetHeight
+    let wsp = ah + ((aw - ah) / 2)
+    let x = (wsp * -1) + piece
+    let y = x + 'px'
+    let z = ((aw - ah) / 2) + 'px'
+    aside.style.left = y
+    aside.style.bottom = z
+    aside.classList.add('onAdvice');
+  }
+  else if (controller===0){
+    aside.classList.add('onAdviceB');
+  }
+}
 var iteratorOfPointsLeft = {
   left: 20,
   spentOnAttack: 0,

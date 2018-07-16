@@ -94,13 +94,24 @@ main {
                 background-color:$grayB;
                 text-align: center;
                 color: white;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.1rem; 
             }
-            .corpus_section_form_fieldset-a {
+            .corpus_section_form_field-A{
                 width: 90%;
-                background-color: black;
-                .corpus_section_form_fieldset-a_container {
+                background-color: $grayA;
+                padding: 1.5rem 0;
+                border: solid 1px #fff;
+                border-top: none;
+                border-bottom: none;
+                .corpus_section_form_fieldset-a {
                     width: 100%;
-                    @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                    background-color: black;
+                    .corpus_section_form_fieldset-a_container {
+                        width: 100%;
+                        @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
+                    }
                 }
             }
             .corpus_section_form_fields {

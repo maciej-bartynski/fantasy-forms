@@ -17,18 +17,36 @@ aside {
   -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.75);
-  min-width: 100px;
+  min-width: 302px;
   border: 1px solid white;
   background-color: gray;
   position: fixed;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  left: -300px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+}
+
+aside.onLoad {
+  left: 0;
+  transform: rotate(0);
+}
+
+aside.onAdvice {
+  animation: somethingToSay;
+  animation-duration: 500ms;
+  animation-iteration-count: 2;
+}
+
+aside.onAdviceB {
+  animation: somethingToSayB;
+  animation-duration: 500ms;
+  animation-iteration-count: 2;
 }
 
 aside .aside-head {
@@ -146,6 +164,30 @@ aside .aside-foot .user-guide_hide {
 
 aside .aside-foot .user-guide_hide:hover {
   background-color: #414141;
+}
+
+@keyframes somethingToSay {
+  from {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 20px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes somethingToSayB {
+  from {
+    margin: 0;
+  }
+  50% {
+    margin: 10px;
+  }
+  to {
+    margin: 0;
+  }
 }
 
 header.head {
@@ -301,14 +343,26 @@ main section form h2 {
   background-color: #414141;
   text-align: center;
   color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 
-main section form .corpus_section_form_fieldset-a {
+main section form .corpus_section_form_field-A {
   width: 90%;
+  background-color: #252525;
+  padding: 1.5rem 0;
+  border: solid 1px #fff;
+  border-top: none;
+  border-bottom: none;
+}
+
+main section form .corpus_section_form_field-A .corpus_section_form_fieldset-a {
+  width: 100%;
   background-color: black;
 }
 
-main section form .corpus_section_form_fieldset-a .corpus_section_form_fieldset-a_container {
+main section form .corpus_section_form_field-A .corpus_section_form_fieldset-a .corpus_section_form_fieldset-a_container {
   width: 100%;
   display: flex;
   flex-direction: row;
