@@ -7,7 +7,7 @@ function init() {
     let belts = document.querySelectorAll('.corpus_section_form_fields-2_fieldset-d_container_atryb .--belt_body-container_body');
     let iter = btns.length;
     for (let i = 0; i < iter; i++) {
-        if (i > 4) {
+        if (i > -1) {
             let attryb = btns[i];
             let belt = belts[i];
             attryb.addEventListener('click', function () {
@@ -23,7 +23,6 @@ function addPoint(belt) {
     let IMG = document.createElement('IMG');
     IMG.setAttribute('src', 'icons/ikona-poteg.svg');
     belt.appendChild(IMG);
-    //amountOfPoints--;
     iteratorOfPointsLeft.left--;
     iteratorOfPointsLeft.equalizator();
     IMG.addEventListener('click', function () {
@@ -33,7 +32,6 @@ function addPoint(belt) {
 
 function deleteThisIMG(x) {
     x.remove();
-    //amountOfPoints++;
     iteratorOfPointsLeft.left++;
     iteratorOfPointsLeft.equalizator();
 }

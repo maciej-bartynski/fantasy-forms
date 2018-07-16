@@ -134,3 +134,12 @@ aside {
         margin: 0;
     }
 }
+.itIsCoin {
+    transition: all 500ms;
+    width: 35px;
+    height: 35px;
+    border: solid 1px white;
+    background-color: black;
+    border-radius: 35px;
+    position: fixed;
+}

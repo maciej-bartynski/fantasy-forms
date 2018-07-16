@@ -47,7 +47,7 @@ function enableNextFormPart(list, otherList) {
         nextPart.classList.remove('itIsHidden');
         let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
         let thisOrnament = allOrnaments[2];
-        thisOrnament.setAttribute('src', './icons/pole.svg');
+        thisOrnament.setAttribute('src', './icons/pole.2.svg');
         thisOrnament.classList.add('itIsPassedThrought');
         let nextOrnament = allOrnaments[3];
         nextOrnament.classList.remove('itIsHidden');

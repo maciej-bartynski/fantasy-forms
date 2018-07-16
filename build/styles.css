@@ -190,6 +190,16 @@ aside .aside-foot .user-guide_hide:hover {
   }
 }
 
+.itIsCoin {
+  transition: all 500ms;
+  width: 35px;
+  height: 35px;
+  border: solid 1px white;
+  background-color: black;
+  border-radius: 35px;
+  position: fixed;
+}
+
 header.head {
   background-color: #252525;
   width: 100%;
@@ -233,13 +243,11 @@ main section form {
 main section form .corpus_section_form_ornament-top {
   width: 90%;
   opacity: 1;
-  margin-bottom: -1rem;
 }
 
 main section form .corpus_section_form_ornament-marker {
   width: 90%;
   transform: rotate(180deg);
-  margin-bottom: -2.5rem;
   opacity: 1;
   z-index: 10;
 }
@@ -256,7 +264,7 @@ main section form .corpus_section_form_ornament-marker.itIsPassedThrought {
   border: solid 1px #fff;
   border-top: none;
   border-bottom: none;
-  background-color: #252525;
+  background-color: gray;
   padding: 1rem;
 }
 
@@ -351,14 +359,13 @@ main section form h2 {
 main section form .corpus_section_form_field-A {
   width: 90%;
   background-color: #252525;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0.5%;
   border: solid 1px #fff;
-  border-top: none;
-  border-bottom: none;
 }
 
 main section form .corpus_section_form_field-A .corpus_section_form_fieldset-a {
   width: 100%;
+  margin: 0;
   background-color: black;
 }
 
@@ -374,10 +381,8 @@ main section form .corpus_section_form_field-A .corpus_section_form_fieldset-a .
 main section form .corpus_section_form_fields {
   background-color: #252525;
   padding: 0.5%;
-  border: solid 1px #fff;
+  border: solid 1px #ffffff;
   box-sizing: border-box;
-  border-top: none;
-  border-bottom: none;
   margin: 0 0 0 0;
   width: 90%;
   display: flex;
@@ -435,17 +440,25 @@ main section form .corpus_section_form_fields .corpus_section_form_fields_fields
   }
 }
 
-main section form .corpus_section_form_fieldset-c {
-  margin: 0 0 0 0;
+main section form .corpus_section_form_field-C {
   width: 90%;
+  padding: 0.5%;
+  background-color: #252525;
+  border: 1px solid #ffffff;
 }
 
-main section form .corpus_section_form_fieldset-c.itIsHidden {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c {
+  margin: 0 0 0 0;
+  width: 100%;
+  background-color: black;
+}
+
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c.itIsHidden {
   opacity: 0.1;
   pointer-events: none;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -454,7 +467,7 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
   align-items: stretch;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
   width: 200px;
   overflow: hidden;
   display: flex;
@@ -466,18 +479,18 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
 }
 
 @media only screen and (max-width: 1000px) {
-  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
+  main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container {
     width: 45%;
   }
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container label {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container label {
   color: white;
   font-weight: bold;
   text-align: center;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select {
   width: 140%;
   margin: 0 -20%;
   padding: 0 20%;
@@ -485,12 +498,12 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
   border: none;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select option {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_flexbox-container_list-container select option {
   border: solid 5px #414141;
   color: white;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -500,32 +513,32 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
 }
 
 @media only screen and (max-width: 1000px) {
-  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
+  main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs {
     width: 95%;
   }
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
   width: 15%;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img.itIsUnselected {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img.itIsUnselected {
   opacity: 0.5;
 }
 
 @media only screen and (max-width: 700px) {
-  main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
+  main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img {
     width: 30%;
   }
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-main section form .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img img.plate {
+main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container .corpus_section_form_fieldset-c_imgs .corpus_section_form_fieldset-c_imgs_img .corpus_section_form_fieldset-c_imgs_img img.plate {
   position: absolute;
   top: 0;
   left: 0;
@@ -536,8 +549,6 @@ main section form .corpus_section_form_fieldset-c div.corpus_section_form_fields
 main section form .corpus_section_form_fields-2 {
   background-color: #252525;
   border: solid 1px white;
-  border-top: none;
-  border-bottom: none;
   width: 90%;
   padding: 0.5%;
   display: flex;

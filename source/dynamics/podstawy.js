@@ -98,7 +98,7 @@ function enableNextPartOfFormula() {
   let allOrnaments = document.querySelectorAll(
     "img.corpus_section_form_ornament-marker"
   );
-  thisOrnament.setAttribute("src", "./icons/pole.svg");
+  thisOrnament.setAttribute("src", "./icons/pole.2.svg");
   thisOrnament.classList.add("itIsPassedThrought");
   let nextOrnament = allOrnaments[1];
   nextOrnament.classList.remove("itIsHidden");

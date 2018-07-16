@@ -185,11 +185,11 @@ function enableNextPartOfForm() {
   nextPart.classList.remove('itIsHidden');
   let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
   let thisOrnament = allOrnaments[1];
-  thisOrnament.setAttribute('src', './icons/pole.svg');
+  thisOrnament.setAttribute('src', './icons/pole.2.svg');
   thisOrnament.classList.add('itIsPassedThrought');
   let nextOrnament = allOrnaments[2];
   nextOrnament.classList.remove('itIsHidden');
-  thisOrnament.style.marginBottom="-1rem";
+  thisOrnament.style.boxSize="border-box";
   thisOrnament.style.zIndex="1";
   nextPart.style.zIndex="2";
   guideReacts(4);

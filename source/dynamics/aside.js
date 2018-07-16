@@ -106,12 +106,35 @@ var iteratorOfPointsLeft = {
     this.left = this.left - bilans
     this.spentOnAttack = amount
     iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x'
+    this.animateOptsSpending(opt, amount);
   },
   deletator() {
     let iterDevice = document.querySelector('.aside-body_how-much')
     this.left = this.left + this.spentOnAttack
     this.spentOnAttack = 0
     iterDevice.innerText = 'Pozostało' + ' ' + this.left + 'x'
+  },
+  animateOptsSpending(opt, amount){
+    let coin = document.createElement('IMG');
+    coin.setAttribute('src', './icons/ikona-poteg.svg');
+    coin.classList.add('itIsCoin');
+    let axS = window.scrollY;
+    let axX = opt.offsetTop;
+    let axZ = axX - axS;
+    let axY = opt.offsetLeft;
+    coin.style.top = axZ+'px';
+    coin.style.left = axY+'px';
+    document.querySelector('body').appendChild(coin);
+    setTimeout(function(){
+      coin.style.left ='0';
+      coin.style.top ='90%';
+      coin.style.width ='55px';
+      coin.style.height ='55px';
+    },0);
+    setTimeout(function(){
+      document.querySelector('body').removeChild(coin);
+      document.querySelector('aside').classList.add('onAdvice');
+    },550);
   },
   iteratorB(integer) {
     let iterDevice = document.querySelector('.aside-body_how-much')
