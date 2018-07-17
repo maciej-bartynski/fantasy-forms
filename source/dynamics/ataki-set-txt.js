@@ -181,7 +181,7 @@ function setNextPartOfFormula() {
 }
 
 function enableNextPartOfForm() {
-  let nextPart = document.querySelector('.corpus_section_form_fieldset-c');
+  let nextPart = document.querySelector('.corpus_section_form_field-C');
   nextPart.classList.remove('itIsHidden');
   let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
   let thisOrnament = allOrnaments[1];

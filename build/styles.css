@@ -447,15 +447,15 @@ main section form .corpus_section_form_field-C {
   border: 1px solid #ffffff;
 }
 
+main section form .corpus_section_form_field-C.itIsHidden {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c {
   margin: 0 0 0 0;
   width: 100%;
   background-color: black;
-}
-
-main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c.itIsHidden {
-  opacity: 0.1;
-  pointer-events: none;
 }
 
 main section form .corpus_section_form_field-C .corpus_section_form_fieldset-c div.corpus_section_form_fieldset-c_flexbox-container {
@@ -660,10 +660,28 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
+  padding-left: 10px;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_radio-lab-container input {
   order: 1;
+  opacity: 0;
+  width: 10px;
+  margin: 0;
+  z-index: 1;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_radio-lab-container .corpus_section_form_fields_fieldset-b_container_radio-lab-container_img-cont {
+  height: 100%;
+  border: solid 1px white;
+  margin-right: -10px;
+  background-color: black;
+  padding: 5px;
+  z-index: 2;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_radio-lab-container .corpus_section_form_fields_fieldset-b_container_radio-lab-container_img-cont img {
+  height: 100%;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_radio-lab-container.isClicked {

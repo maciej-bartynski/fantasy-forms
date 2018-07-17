@@ -60,9 +60,25 @@
                 text-transform: uppercase;
                 font-size: 0.7rem;
                 letter-spacing: 0.1rem;
+                padding-left: 10px;
             }
             input {
                 order: 1;
+                opacity: 0;
+                width: 10px;
+                margin: 0;
+                z-index: 1;
+            }
+            .corpus_section_form_fields_fieldset-b_container_radio-lab-container_img-cont{
+                height: 100%;
+                border: solid 1px white;
+                margin-right: -10px;
+                background-color: black;
+                padding: 5px;
+                z-index: 2;
+                img {
+                    height: 100%;
+                }
             }
             &.isClicked {
                 border: solid 1px white;
