@@ -46,7 +46,8 @@ export function guideReacts (i) {
   let currentPart = parts[i]
   let position = currentPart.offsetTop
   if (arrayWithIters[i] === 0) {
-    window.scrollTo(0, position)
+    //window.scrollTo(0, position)
+    window.zenscroll.toY(position);
     arrayWithIters[i] = 1
     let guide = document.querySelector('.aside-foot .user-guide')
     let title = document.querySelector('.aside-foot_title')

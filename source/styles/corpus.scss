@@ -9,12 +9,11 @@ main {
             @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
             .corpus_section_form_ornament-top {
                 width: 90%;
-                opacity: 1; //margin-bottom: -1rem;
+                opacity: 1;
             }
             .corpus_section_form_ornament-marker {
                 width: 90%;
                 transform: rotate(180deg);
-                //margin-bottom: -2.5rem;
                 opacity: 1;
                 z-index: 10;
                 &.itIsHidden {
@@ -120,8 +119,7 @@ main {
                 background-color: $grayA;
                 padding: 0.5%;
                 border: solid 1px #ffffff;
-                box-sizing: border-box; //border-top: none;
-                //border-bottom: none;
+                box-sizing: border-box;
                 margin: 0 0 0 0;
                 width: 90%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
@@ -238,8 +236,6 @@ main {
                 }
                 background-color: $grayA;
                 border: solid 1px white;
-                //border-top: none;
-                //border-bottom: none;
                 width: 90%;
                 padding: 0.5%;
                 @include flex($dir: row, $wrap: wrap, $jus: space-between, $lig: stretch);
@@ -250,6 +246,55 @@ main {
                         width: 100%;
                     }
                 }
+            }
+        }
+    }
+}
+
+.corpus_section_form_field-A_btn-belt {
+    width: 100%;
+    @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+    padding: 1.5rem 0 0 0;
+    .corpus_section_form_field-A_btn-belt_btn-positioner {
+        @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+        width: 110px;
+        height: 40px;
+        &.itIsHidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .corpus_section_form_field-A_btn-belt_btn-positioner_btn {
+            @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
+            width: 100%;
+            height: 100%;
+            border: solid 1px rgb(117, 0, 0);
+            border-bottom-left-radius: 55px 20px;
+            border-top-left-radius: 55px 20px;
+            border-bottom-right-radius: 55px 20px;
+            border-top-right-radius: 55px 20px;
+            background-color: rgb(158, 0, 0);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            cursor: pointer;
+            user-select: none;
+            -webkit-box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
+            &:hover {
+                background-color: rgb(255, 0, 0);
+                border: solid 1px rgb(179, 0, 0);
+                -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+                -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+                box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+            }
+            &:active {
+                width: 95%;
+                height: 95%;
+                font-size: 0.5rem;
             }
         }
     }

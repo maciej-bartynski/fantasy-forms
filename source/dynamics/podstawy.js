@@ -64,7 +64,8 @@ function userMottoAccept(item, nextItem) {
     let allFieldsAreSet = checkIfFieldsAreSet();
     let term = partOfForm.classList.contains("itIsHidden");
     if (allFieldsAreSet === true && term === true) {
-      enableNextPartOfFormula();
+      //enableNextPartOfFormula();
+      showBtnOfAcceptation();
     }
     setThisDataToDescription();
   });
@@ -90,7 +91,13 @@ function checkIfFieldsAreSet() {
     }
   }
 }
-
+function showBtnOfAcceptation() {
+  let btn = document.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner');
+  btn.classList.remove('itIsHidden');
+  btn.addEventListener('click', function(){
+    enableNextPartOfFormula();
+  })
+}
 function enableNextPartOfFormula() {
   let thisOrnament = document.querySelector(
     "img.corpus_section_form_ornament-marker"
