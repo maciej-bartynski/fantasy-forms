@@ -635,6 +635,33 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   height: 29px;
 }
 
+.corpus_section_form_field-A_btn-belt .corpus_section_form_field-A_btn-belt_btn-positioner .corpus_section_form_field-A_btn-belt_btn-positioner_btn.beforeItIsClicked {
+  animation: shine 3000ms infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+  }
+  70% {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+    box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+    box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
+  }
+}
+
 .corpus_section_form_fieldset-a_container_inp-lab-container {
   width: 30%;
   display: flex;
