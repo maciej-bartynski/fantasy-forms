@@ -259,31 +259,27 @@ main {
         @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
         width: 110px;
         height: 40px;
+        background: url('./../icons/btn-ornament.svg');
+        background-position: center;
+        background-size: cover;
         &.itIsHidden {
             opacity: 0;
             pointer-events: none;
         }
         .corpus_section_form_field-A_btn-belt_btn-positioner_btn {
             @include flex($dir: row, $wrap: nowrap, $jus: center, $lig: center);
-            width: 100%;
-            height: 100%;
-            border: solid 1px rgb(117, 0, 0);
-            border-bottom-left-radius: 55px 20px;
-            border-top-left-radius: 55px 20px;
-            border-bottom-right-radius: 55px 20px;
-            border-top-right-radius: 55px 20px;
+            width: 32px;
+            height: 32px;
+            border: solid 1px rgb(124, 124, 124);
+            border-radius: 50px;
             background-color: rgb(158, 0, 0);
             color: white;
             text-transform: uppercase;
-            font-size: 0.6rem;
+            font-size: 0.4rem;
             font-family: sans-serif;
-            font-weight: bold;
             letter-spacing: 0.1rem;
             cursor: pointer;
             user-select: none;
-            -webkit-box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
-            box-shadow: 0px 0px 5px 2px rgba(158, 0, 0, 0.75);
             &:hover {
                 background-color: rgb(255, 0, 0);
                 border: solid 1px rgb(179, 0, 0);
@@ -292,9 +288,8 @@ main {
                 box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
             }
             &:active {
-                width: 95%;
-                height: 95%;
-                font-size: 0.5rem;
+                width: 29px;
+                height: 29px;
             }
         }
     }

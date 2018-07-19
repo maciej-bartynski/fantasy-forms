@@ -2,7 +2,7 @@ import { setNameToDes } from "./ataki-set-txt.js";
 import { setNicknameToDes } from "./ataki-set-txt.js";
 import { setSentenceToDes } from "./ataki-set-txt.js";
 import { guideReacts } from "./aside.js";
-("use strict");
+"use strict";
 document.addEventListener("DOMContentLoaded", function() {
   userFlowViaFirstFieldset();
 });
@@ -113,7 +113,6 @@ function enableNextPartOfFormula() {
   partOfForm.classList.remove("itIsHidden");
   guideReacts(1);
 }
-
 function setThisDataToDescription() {
   setNameToDes();
   setNicknameToDes();
