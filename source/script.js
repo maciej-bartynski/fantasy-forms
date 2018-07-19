@@ -6,7 +6,9 @@ import './styles/header.scss';
 import './styles/corpus.scss';
 import './styles/identity.scss';
 
+import './dynamics/form_initializeNextSection.js';
 import './dynamics/form_section-one.js';
+import './dynamics/form_section-two.js';
 
 //import './dynamics/podstawy.js';
 import './dynamics/klasa.js';

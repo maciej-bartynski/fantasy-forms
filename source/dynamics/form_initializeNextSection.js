@@ -1,23 +1,52 @@
-import {guideReacts} from './aside.js';
+import { guideReacts } from './aside.js'
 import zenscroll from './../../node_modules/zenscroll/zenscroll.js'
-export function initializeNextSection(iterator){
-    let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
-    let thisOrnament = allOrnaments[iterator-1];
-    let nextOrnament = allOrnaments[iterator-1];
-    thisOrnament.setAttribute("src", "./icons/pole.2.svg");
-    thisOrnament.classList.add("itIsPassedThrought");
-    nextOrnament.classList.remove("itIsHidden");
-    //window.scrollTo(0, nextOrnament.offsetTop);
-    zenscroll.toY(nextOrnament.offsetTop);
-    enableNextSection(iterator);
+'use strict'
+document.addEventListener('DOMContentLoaded', initializeBtnsOfAcceptance)
+function initializeBtnsOfAcceptance () {
+  let acceptationBtn = document.querySelectorAll('.corpus_section_form_field-A_btn-belt_btn-positioner_btn')
+  let amount = acceptationBtn.length
+  for (let i = 0; i < amount; i++) {
+    acceptationBtn[i].addEventListener('click', function () {
+      if (acceptationBtn[i].classList.contains('beforeItIsClicked') === true) {
+        acceptationBtn[i].classList.remove('beforeItIsClicked')
+        acceptationBtn[i].classList.add('itIsClicked')
+        signThisAsClicked(acceptationBtn[i])
+        initializeNextSection(i)
+      } else {
+        initAgainGuideTextForThisSection(i)
+      }
+    })
+  }
 }
-function enableNextSection(iterator){
-    let allSections = [
-        undefined,
-        document.querySelector('.corpus_section_form_fields'),
-        document.querySelector('.corpus_section_form_field-C'),
-        document.querySelector('.corpus_section_form_fields-2') 
-    ];
-    allSections[iterator].classList.remove('itIsHidden')
-    guideReacts(iterator);
+function signThisAsClicked (btn) {
+  btn.innerText = ''
+}
+function initAgainGuideTextForThisSection (i) {
+  guideReacts(i)
+}
+function initializeNextSection (iterator) {
+  let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker')
+  let thisOrnament = allOrnaments[iterator]
+  let nextOrnament = allOrnaments[iterator + 1]
+  thisOrnament.setAttribute('src', './icons/pole.2.svg')
+  thisOrnament.classList.add('itIsPassedThrought')
+  nextOrnament.classList.remove('itIsHidden')
+  // window.scrollTo(0, nextOrnament.offsetTop)
+  zenscroll.toY(thisOrnament.offsetTop)
+  enableNextSection(iterator)
+}
+function enableNextSection (iterator) {
+  iterator += 1
+  let allSections = [
+    undefined,
+    document.querySelector('.corpus_section_form_fields'),
+    document.querySelector('.corpus_section_form_field-C'),
+    document.querySelector('.corpus_section_form_fields-2')
+  ]
+  allSections[iterator].classList.remove('itIsHidden')
+  guideReacts(iterator)
+}
+export function showBtnOfAcceptance (btn, container) {
+  container.classList.remove('itIsHidden')
+  btn.classList.add('beforeItIsClicked')
 }

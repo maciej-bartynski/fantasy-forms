@@ -262,6 +262,7 @@ main {
         background: url('./../icons/btn-ornament.svg');
         background-position: center;
         background-size: cover;
+        position: relative;
         &.itIsHidden {
             opacity: 0;
             pointer-events: none;
@@ -280,7 +281,11 @@ main {
             letter-spacing: 0.1rem;
             cursor: pointer;
             user-select: none;
+            &.beforeItIsClicked {
+                animation: shine 2000ms infinite;
+            }
             &:hover {
+                animation: none;
                 background-color: rgb(255, 0, 0);
                 border: solid 1px rgb(179, 0, 0);
                 -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0.65);
@@ -291,19 +296,37 @@ main {
                 width: 29px;
                 height: 29px;
             }
-            &.beforeItIsClicked {
-                animation: shine 3000ms infinite;
+            &.itIsClicked {
+                background-color: rgba(0, 2, 122, 1);
+                -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                -moz-box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                border-color: rgb(0, 2, 90);
+                &:hover {
+                    animation: none;
+                    background-color: rgba(0, 2, 122, 1);
+                    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                    box-shadow: 0px 0px 10px 5px rgba(0, 2, 122, 0.65);
+                    border-color: rgb(0, 2, 90);
+                }
+                &:active {
+                    width: 32px;
+                    height: 32px;
+                }
+                z-index: 1;
             }
         }
     }
 }
+
 @keyframes shine {
     from {
         -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
         -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
         box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
     }
-    50%{
+    50% {
         -webkit-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
         -moz-box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
         box-shadow: 0px 0px 10px 5px rgba(224, 3, 3, 0);
