@@ -19,34 +19,40 @@ function initializeBtnsOfAcceptance () {
   }
 }
 function signThisAsClicked (btn) {
-  btn.innerText = ''
+  btn.innerText = '';
 }
 function initAgainGuideTextForThisSection (i) {
-  guideReacts(i)
+  guideReacts(i);
 }
 function initializeNextSection (iterator) {
   let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker')
-  let thisOrnament = allOrnaments[iterator]
-  let nextOrnament = allOrnaments[iterator + 1]
-  thisOrnament.setAttribute('src', './icons/pole.2.svg')
-  thisOrnament.classList.add('itIsPassedThrought')
-  nextOrnament.classList.remove('itIsHidden')
+  let thisOrnament = allOrnaments[iterator];
+  let nextOrnament = allOrnaments[iterator + 1];
+  if (iterator===1||iterator===2){
+    thisOrnament=allOrnaments[0];
+    nextOrnament=allOrnaments[1];
+  }
+  thisOrnament.setAttribute('src', './icons/pole.2.svg');
+  thisOrnament.classList.add('itIsPassedThrought');
+  nextOrnament.classList.remove('itIsHidden');
   // window.scrollTo(0, nextOrnament.offsetTop)
-  zenscroll.toY(thisOrnament.offsetTop)
-  enableNextSection(iterator)
+  zenscroll.toY(thisOrnament.offsetTop);
+  enableNextSection(iterator);
 }
 function enableNextSection (iterator) {
   iterator += 1
   let allSections = [
     undefined,
     document.querySelector('.corpus_section_form_fields'),
+    document.querySelectorAll('.corpus_section_form_fields fieldset')[1],
+    document.querySelectorAll('.corpus_section_form_fields fieldset')[2],
     document.querySelector('.corpus_section_form_field-C'),
     document.querySelector('.corpus_section_form_fields-2')
   ]
-  allSections[iterator].classList.remove('itIsHidden')
-  guideReacts(iterator)
+  allSections[iterator].classList.remove('itIsHidden');
+  guideReacts(iterator);
 }
 export function showBtnOfAcceptance (btn, container) {
-  container.classList.remove('itIsHidden')
-  btn.classList.add('beforeItIsClicked')
+  container.classList.remove('itIsHidden');
+  btn.classList.add('beforeItIsClicked');
 }

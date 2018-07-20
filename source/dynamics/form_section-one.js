@@ -1,13 +1,21 @@
-import { showBtnOfAcceptance } from './form_initializeNextSection.js'
-import { setNameToDes } from './ataki-set-txt.js'
-import { setNicknameToDes } from './ataki-set-txt.js'
-import { setSentenceToDes } from './ataki-set-txt.js'
+import {
+  showBtnOfAcceptance
+} from './form_initializeNextSection.js'
+import {
+  setNameToDes
+} from './ataki-set-txt.js'
+import {
+  setNicknameToDes
+} from './ataki-set-txt.js'
+import {
+  setSentenceToDes
+} from './ataki-set-txt.js'
 'use strict'
 document.addEventListener('DOMContentLoaded', function () {
   initUserFlowViaSection_selectNodesToThisProcess()
 })
 
-function initUserFlowViaSection_selectNodesToThisProcess () {
+function initUserFlowViaSection_selectNodesToThisProcess() {
   let nodes = [
     document.querySelector('input[name="imie"]'),
     document.querySelector('input[name="przydomek"]'),
@@ -30,7 +38,7 @@ function initUserFlowViaSection_selectNodesToThisProcess () {
   }))
 }
 
-function initUserFlowViaSection_goToNextNode (node, idx, nodes) {
+function initUserFlowViaSection_goToNextNode(node, idx, nodes) {
   node.blur()
   if (idx < 2) {
     nodes[idx + 1].focus()
@@ -39,7 +47,7 @@ function initUserFlowViaSection_goToNextNode (node, idx, nodes) {
   }
 }
 
-function initUserFlowToNextSection_checkIfThisSectionIsCompleted (nodes) {
+function initUserFlowToNextSection_checkIfThisSectionIsCompleted(nodes) {
   let arr = [false, false, false]
   nodes.forEach(function (node, idx) {
     if (node.value.trim() === '') {
@@ -54,15 +62,19 @@ function initUserFlowToNextSection_checkIfThisSectionIsCompleted (nodes) {
     return false
   }
 }
+let controller = 0;
 
-function initUserFlowToNextSection_showBtnOfAcceptance () {
-  let btnContainerForThisSection = document.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner.firstSectionBtn')
-  let btnOfThisSection = btnContainerForThisSection.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner_btn')
-  showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection)
-  setCurrentDataToAvatarDescription()
+function initUserFlowToNextSection_showBtnOfAcceptance() {
+  if (controller === 0) {
+    let btnContainerForThisSection = document.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner.firstSectionBtn')
+    let btnOfThisSection = btnContainerForThisSection.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner_btn')
+    showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection)
+    setCurrentDataToAvatarDescription();
+    controller = 1;
+  }
 }
 
-function setCurrentDataToAvatarDescription () {
+function setCurrentDataToAvatarDescription() {
   setNameToDes()
   setNicknameToDes()
   setSentenceToDes()
