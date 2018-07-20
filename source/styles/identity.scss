@@ -27,14 +27,17 @@
         color: black;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         &::placeholder {
-            color: black;
+            color: white;
             opacity: 1;
+            font-style: italic;
         }
         &:-ms-input-placeholder {
-            color: black;
+            color: white;
+            font-style: italic;
         }
         &::-ms-input-placeholder {
-            color: black;
+            color: white;
+            font-style: italic;
         }
     }
 }
@@ -69,7 +72,7 @@
                 margin: 0;
                 z-index: 1;
             }
-            .corpus_section_form_fields_fieldset-b_container_radio-lab-container_img-cont{
+            .corpus_section_form_fields_fieldset-b_container_radio-lab-container_img-cont {
                 height: 100%;
                 border: solid 1px white;
                 margin-right: -10px;
@@ -164,16 +167,31 @@
             }
         }
     }
+    &.itIsHidden {
+        opacity: 0.3;
+        pointer-events: none;
+        .corpus_section_form_fields_fieldset-b_container {
+            .corpus_section_form_fields_fieldset-b_container_select-container {
+                &.enabled {
+                    opacity: 0.1;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
 }
 
 .corpus_section_form_fields_fieldset-b {
+    &.itIsHidden {
+        opacity: 0.3;
+        pointer-events: none;
+    }
     .corpus_section_form_fields_fieldset-b_container {
         &.strikeName {
             pointer-events: none;
             opacity: 0.1;
         }
         width: 100%;
-        height: 100%;
         @include flex($dir: column, $wrap: nowrap, $jus: flex-start, $lig: center);
         .corpus_section_form_fields_fieldset-b_container_list-cont {
             width: 100%;

@@ -11,8 +11,8 @@ import './dynamics/form_section-one.js';
 import './dynamics/form_section-two.js';
 
 //import './dynamics/podstawy.js';
-import './dynamics/klasa.js';
-import './dynamics/ataki.js';
+//import './dynamics/klasa.js';
+//import './dynamics/ataki.js';
 import './dynamics/ataki-set-txt.js';
 import './dynamics/attrybs.js';
 import './dynamics/obrony.js';

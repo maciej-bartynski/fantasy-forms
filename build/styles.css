@@ -728,16 +728,19 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
 }
 
 .corpus_section_form_fieldset-a_container_inp-lab-container input::placeholder {
-  color: black;
+  color: white;
   opacity: 1;
+  font-style: italic;
 }
 
 .corpus_section_form_fieldset-a_container_inp-lab-container input:-ms-input-placeholder {
-  color: black;
+  color: white;
+  font-style: italic;
 }
 
 .corpus_section_form_fieldset-a_container_inp-lab-container input::-ms-input-placeholder {
-  color: black;
+  color: white;
+  font-style: italic;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container {
@@ -913,9 +916,23 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   pointer-events: auto;
 }
 
+.corpus_section_form_fields_fieldset-b.a.itIsHidden {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.corpus_section_form_fields_fieldset-b.a.itIsHidden .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container.enabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.corpus_section_form_fields_fieldset-b.itIsHidden {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .corpus_section_form_fields_fieldset-b .corpus_section_form_fields_fieldset-b_container {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
