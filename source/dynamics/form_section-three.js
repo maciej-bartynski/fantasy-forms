@@ -1,7 +1,11 @@
 "use strict";
 import iteratorOfPointsLeft from "./aside.js";
-import { showBtnOfAcceptance } from "./form_initializeNextSection.js";
-import { objectToArray } from "./object-to-array.js";
+import {
+  showBtnOfAcceptance
+} from "./form_initializeNextSection.js";
+import {
+  objectToArray
+} from "./object-to-array.js";
 document.addEventListener("DOMContentLoaded", initializeAttacksPart);
 export function enableAttacks(i) {
   let attacks = objectToArray(
@@ -9,10 +13,13 @@ export function enableAttacks(i) {
       ".corpus_section_form_fields_fieldset-b_container_select-container"
     )
   );
-  attacks.forEach(function(attack, idx) {
+  attacks.forEach(function (attack, idx) {
     attack.classList.remove("enabled");
     let options = objectToArray(attack.querySelectorAll("option"));
-    options.forEach(function(option) {
+    attack.querySelector('select').addEventListener('change', function () {
+      synchronizeBackgroundsOnChange(attack, options);
+    });
+    options.forEach(function (option) {
       if (option.selected === true) {
         option.selected = false;
       }
@@ -20,7 +27,23 @@ export function enableAttacks(i) {
   });
   attacks[i].classList.add("enabled");
 }
+
+function synchronizeBackgroundsOnChange(node, children) {
+  let belts = objectToArray(
+    node
+    .querySelectorAll(".corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt"));
+  belts.forEach(belt => belt.removeAttribute('style'));
+  children.forEach(function (opt, idx) {
+    if (opt.value === node.querySelector('select').value) {
+      belts[idx].style.backgroundColor = 'rgb(30, 144, 255)';
+      initUserFlowToNextSection_showBtnOfAcceptance();
+      iteratorOfPointsLeft.iterator(node, idx);
+    }
+  })
+};
+
 let controller = 0;
+
 function initUserFlowToNextSection_showBtnOfAcceptance() {
   if (controller === 0) {
     let btnContainerForThisSection = document.querySelector(
@@ -33,48 +56,39 @@ function initUserFlowToNextSection_showBtnOfAcceptance() {
     controller = 1;
   }
 }
+
 function initializeAttacksPart() {
   objectToArray(
     document.querySelectorAll(
       ".corpus_section_form_fields_fieldset-b_container_select-container"
     )
-  ).forEach(function(container) {
-    objectToArray(container.querySelectorAll("option")).forEach(function(
+  ).forEach(function (container) {
+    //on select-list option mouse hover over
+    objectToArray(container.querySelectorAll("option")).forEach(function (
       option,
       idx
     ) {
-      option.addEventListener("mouseout", function(event) {
-        highlightBackground(container, option, event, idx);
+      option.addEventListener("mouseout", function (event) {
+        highlightBackground(container, event, idx);
       });
-      option.addEventListener("mouseenter", function(event) {
-        highlightBackground(container, option, event, idx);
+      option.addEventListener("mouseover", function (event) {
+        highlightBackground(container, event, idx);
       });
     });
-    //
-    container.querySelector("select").addEventListener('change',function(event){
-        //tu bedzie dalej jutrop
+    //option-like div
+    objectToArray(
+      container
+      .querySelectorAll(".corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt")).forEach(function (belt, idx) {
+      belt.addEventListener('mouseover', function (event) {
+        highlightBackground(container, event, idx);
+      });
+      belt.addEventListener('mouseout', function (event) {
+        highlightBackground(container, event, idx);
+      });
     });
   });
-  /*let amount = containers.length;
-  for (let i = 0; i < amount; i++) {
-    let cont = containers[i];
-    let options = cont.querySelectorAll("option");
-    let iter = options.length;
-    for (let x = 0; x < iter; x++) {
-      let opt = options[x];
-      opt.addEventListener("mouseout", onMOut);
-      opt.addEventListener("mouseenter", onMEnter);
-      function onMEnter() {
-        if (opt.selected === false) {
-          synchronizeThisBckgrWithImageBeltHoverBckgr(opt, cont, x, true);
-        }
-      }
-      function onMOut() {
-        if (opt.selected === false) {
-          synchronizeThisBckgrWithImageBeltHoverBckgr(opt, cont, x, false);
-        }
-      }
-    }
+  /*
+    
     let selectList = cont.querySelector("select");
     selectList.addEventListener("change", function() {
       for (let q = 0; q < iter; q++) {
@@ -90,26 +104,21 @@ function initializeAttacksPart() {
     });
   }*/
 }
-function highlightBackground(container, option, event, idx) {
-  if (event.type === "mouseenter") {
-    let style = window
-      .getComputedStyle(option)
-      .getPropertyValue("background-color");
+
+function highlightBackground(container, event, idx) {
+  if (event.type === "mouseover") {
     container.querySelectorAll(
       ".corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt"
-    )[idx].style.backgroundColor = style;
+    )[idx].classList.add('JSonHover');
+    container.querySelectorAll(
+      "option"
+    )[idx].classList.add('JSonHover');
   } else if (event.type === "mouseout") {
     container.querySelectorAll(
       ".corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt"
-    )[idx].style.backgroundColor =
-      "inherit";
-  }
-}
-function synchronizeBackgroundsOfOtherOptns(cont, iter) {
-  for (let x = 0; x < iter; x++) {
-    let belt = cont.querySelectorAll(
-      ".corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt"
-    )[x];
-    belt.style.backgroundColor = "inherit";
+    )[idx].classList.remove('JSonHover');
+    container.querySelectorAll(
+      "option"
+    )[idx].classList.remove('JSonHover');
   }
 }

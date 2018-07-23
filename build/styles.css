@@ -865,7 +865,7 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   align-items: center;
 }
 
-.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list select option:hover {
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_select-list select option.JSonHover {
   background-color: gray;
 }
 
@@ -909,6 +909,10 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   border-radius: 999px;
   height: 100%;
   padding: 2px;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt.JSonHover {
+  background-color: gray;
 }
 
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container.enabled {

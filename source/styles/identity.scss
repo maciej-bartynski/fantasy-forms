@@ -124,7 +124,7 @@
                         padding-right: 50%;
                         border-collapse: collapse;
                         @include flex( $dir: row, $wrap: nowrap, $jus: flex-end, $lig: center);
-                        &:hover {
+                        &.JSonHover {
                             background-color: $grayC;
                         }
                     }
@@ -156,6 +156,9 @@
                             height: 100%;
                             padding: 2px;
                         }
+                    }
+                    &.JSonHover {
+                        background-color: $grayC;
                     }
                 }
             }
