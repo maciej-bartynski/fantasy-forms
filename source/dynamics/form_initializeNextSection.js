@@ -50,6 +50,9 @@ function enableNextSection (iterator) {
     document.querySelector('.corpus_section_form_fields-2')
   ]
   allSections[iterator].classList.remove('itIsHidden');
+  if(iterator===3){
+    allSections[iterator].querySelector('.corpus_section_form_fields_fieldset-b_container').classList.remove('strikeName');
+  }
   guideReacts(iterator);
 }
 export function showBtnOfAcceptance (btn, container) {

@@ -115,7 +115,6 @@ function initializeAttacksPart() {
         changeEv.initEvent('change');
         container.querySelectorAll("option")[idx].selected = true;
         container.querySelector("select").dispatchEvent(changeEv);
-       // synchronizeBackgroundsOnChange(container, objectToArray(container.querySelectorAll("option")));
       });
     });
   });
