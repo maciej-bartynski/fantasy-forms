@@ -915,6 +915,14 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   background-color: gray;
 }
 
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt.JSonSelect {
+  background-color: dodgerblue;
+}
+
+.corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container .corpus_section_form_fields_fieldset-b_container_select-container_img-part-container div.corpus_section_form_fields_fieldset-b_container_select-container_img-part-container_opt.JSonBlur {
+  background-color: #c8c8c8;
+}
+
 .corpus_section_form_fields_fieldset-b.a .corpus_section_form_fields_fieldset-b_container .corpus_section_form_fields_fieldset-b_container_select-container.enabled {
   opacity: 1;
   pointer-events: auto;

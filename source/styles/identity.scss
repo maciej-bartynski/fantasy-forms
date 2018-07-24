@@ -160,6 +160,12 @@
                     &.JSonHover {
                         background-color: $grayC;
                     }
+                    &.JSonSelect {
+                        background-color: rgb(30, 144, 255);
+                    }
+                    &.JSonBlur{
+                        background-color: rgb(200,200,200);
+                    }
                 }
             }
             opacity: 0.1;
