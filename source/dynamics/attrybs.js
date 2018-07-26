@@ -1,4 +1,7 @@
 import iteratorOfPointsLeft from './aside.js';
+import {
+    showBtnOfAcceptance
+} from './form_initializeNextSection.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', init);
 
@@ -34,4 +37,25 @@ function deleteThisIMG(x) {
     x.remove();
     iteratorOfPointsLeft.left++;
     iteratorOfPointsLeft.equalizator();
+}
+
+let controller = 0;
+
+export function initUserFlowToNextSection_showLastBtnOfAcceptance() {
+    if (controller === 0) {
+        let btnContainerForThisSection = document.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner.seventhSectionBtn"
+        );
+        let btnOfThisSection = btnContainerForThisSection.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner_btn"
+        );
+        showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection);
+        controller = 1;
+        clickBtnOfAcceptance(btnOfThisSection);
+    }
+}
+function clickBtnOfAcceptance(btn){
+    let clickBtn = document.createEvent('MouseEvent');
+    clickBtn.initMouseEvent('click');
+    btn.dispatchEvent(clickBtn);
 }

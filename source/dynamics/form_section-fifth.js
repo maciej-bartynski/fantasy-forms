@@ -1,7 +1,9 @@
-import {guideReacts} from './aside.js';
-"use strict";
-document.addEventListener("DOMContentLoaded", initializeThisSection);
-
+import {showBtnOfAcceptance} from './form_initializeNextSection.js';
+'use strict';
+document.addEventListener('DOMContentLoaded', initializeUserFlowViaSectionOfDefends);
+function initializeUserFlowViaSectionOfDefends(){
+    initializeThisSection();
+}
 function initializeThisSection() {
     let listA = document.querySelector(
         ".corpus_section_form_fieldset-c #zaslona"
@@ -35,22 +37,35 @@ function dynamizeThisList(list, opts, images, otherList) {
                 images[i].classList.remove("itIsUnselected");
             }
         }
-        //enableNextFormPart(list, otherList);
+        enableNextFormPart(list, otherList);
     });
 }
-
 function enableNextFormPart(list, otherList) {
     let a = list.value;
     let b = otherList.value;
     if (a !== "" && b !== "") {
-        let nextPart = document.querySelector('.corpus_section_form_fields-2');
+        /*let nextPart = document.querySelector('.corpus_section_form_fields-2');
         nextPart.classList.remove('itIsHidden');
         let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker');
         let thisOrnament = allOrnaments[2];
         thisOrnament.setAttribute('src', './icons/pole.2.svg');
         thisOrnament.classList.add('itIsPassedThrought');
         let nextOrnament = allOrnaments[3];
-        nextOrnament.classList.remove('itIsHidden');
-        guideReacts(5);
+        nextOrnament.classList.remove('itIsHidden');*/
+        initUserFlowToNextSection_showBtnOfAcceptance();
+        //guideReacts(5);
+    }
+}
+let controller = 0;
+function initUserFlowToNextSection_showBtnOfAcceptance() {
+    if (controller === 0) {
+        let btnContainerForThisSection = document.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner.fifthSectionBtn"
+        );
+        let btnOfThisSection = btnContainerForThisSection.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner_btn"
+        );
+        showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection);
+        controller = 1;
     }
 }

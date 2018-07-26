@@ -1,5 +1,8 @@
 import iteratorOfPointsLeft from './aside.js';
 import {guideReacts} from './aside.js';
+import {
+    showBtnOfAcceptance
+} from './form_initializeNextSection.js';
 'use strict';
 document.addEventListener('DOMContentLoaded', initializeThisSelect)
 
@@ -10,6 +13,7 @@ function initializeThisSelect() {
         let opt = options[i];
         opt.addEventListener('click', function () {
             itIsClicked(opt, options, iter, i);
+            initUserFlowToNextSection_showBtnOfAcceptance();
         })
     }
 }
@@ -22,7 +26,7 @@ function itIsClicked(opt, opts, iter, i) {
     }else{
         checks[i].checked=true;
         iteratorOfPointsLeft.deletatorB(costOfThis[i]);
-        guideReacts(6);
+        //guideReacts(6);
     }
     for (let j = 0; j < iter; j++) {
         if (checks[j].checked === true) {
@@ -31,5 +35,19 @@ function itIsClicked(opt, opts, iter, i) {
         if (checks[j].checked === false) {
             opts[j].classList.add('itIsHidden');
         }
+    }
+}
+let controller = 0;
+
+function initUserFlowToNextSection_showBtnOfAcceptance() {
+    if (controller === 0) {
+        let btnContainerForThisSection = document.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner.sixthSectionBtn"
+        );
+        let btnOfThisSection = btnContainerForThisSection.querySelector(
+            ".corpus_section_form_field-A_btn-belt_btn-positioner_btn"
+        );
+        showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection);
+        controller = 1;
     }
 }

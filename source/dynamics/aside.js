@@ -53,6 +53,7 @@ export function guideReacts(i) {
     'Wymyśl nazwe dla uderzenia z poprzedniego kroku. Gdy ją zatwierdzisz, pojawi sie kolejna cześć karty postaci.',
     'Po wyborze jednej opcji z każdej listy, pojawi sie kolejna cześć karty postaci.',
     'Kliknij tyle opcji, ile chcesz. Każdy zestaw (czyli moc i pietno) zabiera ci pewną ilość punktów Mądrości.',
+    'Rozdaj pozostałe punkty mądrości na współczynniki postaci: Życie, Mądrość, Ruch i Działanie.',
     'Rozdaj pozostałe punkty mądrości na współczynniki postaci: Życie, Mądrość, Ruch i Działanie.'
   ]
   guide.innerText = arr[i]
@@ -62,7 +63,8 @@ export function guideReacts(i) {
     'atak:',
     'nazwa ataku:',
     'obrona:',
-    'zdolność i słabość',
+    'zdolność i słabość:',
+    'atrybuty:',
     'atrybuty:'
   ]
   title.innerText = arrB[i]
