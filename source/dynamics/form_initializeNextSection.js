@@ -28,7 +28,7 @@ function initializeNextSection (iterator) {
   let allOrnaments = document.querySelectorAll('img.corpus_section_form_ornament-marker')
   let thisOrnament = allOrnaments[iterator];
   let nextOrnament = allOrnaments[iterator + 1];
-  if (iterator===1||iterator===2){
+  if (iterator === 1 || iterator === 2){
     thisOrnament=allOrnaments[0];
     nextOrnament=allOrnaments[1];
   }
@@ -38,6 +38,13 @@ function initializeNextSection (iterator) {
   // window.scrollTo(0, nextOrnament.offsetTop)
   zenscroll.toY(thisOrnament.offsetTop);
   enableNextSection(iterator);
+  if (iterator===1){
+    let PositionA = document.querySelectorAll('.corpus_section_form_fields fieldset')[1];
+    zenscroll.toY(PositionA.offsetTop);
+  }else if(iterator ===2){
+    let PositionB = document.querySelectorAll('.corpus_section_form_fields fieldset')[2];
+    zenscroll.toY(PositionB.offsetTop);
+  }
 }
 function enableNextSection (iterator) {
   iterator += 1

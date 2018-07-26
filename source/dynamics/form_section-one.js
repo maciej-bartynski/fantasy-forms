@@ -1,19 +1,20 @@
 import {
   showBtnOfAcceptance
-} from './form_initializeNextSection.js'
-import {
+} from './form_initializeNextSection.js';
+/*import {
   setNameToDes
-} from './ataki-set-txt.js'
+} from './ataki-set-txt.js';
 import {
   setNicknameToDes
-} from './ataki-set-txt.js'
+} from './ataki-set-txt.js';
 import {
   setSentenceToDes
-} from './ataki-set-txt.js'
-'use strict'
+} from './ataki-set-txt.js';*/
+import {useThisValueToCreateDescription} from './form_section-fourth.js';
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   initUserFlowViaSection_selectNodesToThisProcess()
-})
+});
 
 function initUserFlowViaSection_selectNodesToThisProcess() {
   let nodes = [
@@ -34,6 +35,15 @@ function initUserFlowViaSection_selectNodesToThisProcess() {
     let sectionCompleted = initUserFlowToNextSection_checkIfThisSectionIsCompleted(nodes)
     if (sectionCompleted === true) {
       initUserFlowToNextSection_showBtnOfAcceptance()
+    };
+    if (idx===0||idx===1){
+      if(idx===0){
+        let string = node.value.charAt(0).toUpperCase() + node.value.slice(1);
+        useThisValueToCreateDescription(string, 3);
+      }else{
+        let string = node.value.charAt(0).toUpperCase() + node.value.slice(1);
+        useThisValueToCreateDescription(string, 4);
+      }
     }
   }))
 }
@@ -69,7 +79,7 @@ function initUserFlowToNextSection_showBtnOfAcceptance() {
     let btnContainerForThisSection = document.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner.firstSectionBtn')
     let btnOfThisSection = btnContainerForThisSection.querySelector('.corpus_section_form_field-A_btn-belt_btn-positioner_btn')
     showBtnOfAcceptance(btnOfThisSection, btnContainerForThisSection)
-    setCurrentDataToAvatarDescription();
+    //setCurrentDataToAvatarDescription();
     controller = 1;
   }
 }

@@ -7,7 +7,10 @@ import {
 import {
     enableAttacks
 } from './form_section-three.js';
-'use strict'
+import {
+    useThisValueToCreateDescription
+} from './form_section-fourth.js';
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     initUserFlowViaSection_selectNodesToThisProcess();
 })
@@ -17,6 +20,7 @@ function initUserFlowViaSection_selectNodesToThisProcess() {
     let avatars = objectToArray(avatarObjects);
     avatars.forEach((item, idx) => item.addEventListener('click', function () {
         avatarIsClicked(item, avatars, idx);
+        sendAvatarsValueToFunctionThatSendItFurther(item.value, idx);
     }));
 }
 
@@ -39,7 +43,24 @@ function initUserFlowToNextSection_showBtnOfAcceptance(idx) {
     }
 }
 
-
+function sendAvatarsValueToFunctionThatSendItFurther(item, idx) {
+    let string;
+    if (idx === 0) {
+        string = 'uderzenie ciężką bronią białą - czyli orężem brutalnym.';
+    } else if (idx === 1) {
+        string = 'uderzenie na dystans - czyli orężem strzeleckim.';
+    } else if (idx === 2) {
+        string = 'uderzenie lekką bronią białą - czyli orężem zdradzieckim.';
+    } else if (idx === 3) {
+        string = 'uderzenie wybuchową bronią alchemiczną - czyli orężem szaleńczym.';
+    } else if (idx === 4) {
+        string = 'uderzenie magiczną mocą - czyli orężem czarownika.';
+    } else if (idx === 5) {
+        string = 'uderzenie czymkolwiek, co wpadnie karłowi w plugawe łapska - czyli błazeńskim orężem ponurego dowcipnisia.';
+    }
+    useThisValueToCreateDescription(string, 2);
+    useThisValueToCreateDescription("", 1);
+}
 
 /*function initUserFlowViaSection_selectNodesToThisProcess () {
   let nodes = [
