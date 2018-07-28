@@ -433,10 +433,15 @@ main section form .corpus_section_form_fields .corpus_section_form_fields_fields
   }
 }
 
+main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(3) {
+  position: relative;
+}
+
 @media only screen and (max-width: 370mm) {
   main section form .corpus_section_form_fields .corpus_section_form_fields_fieldset-b:nth-of-type(3) {
     width: 100%;
     min-width: 1px;
+    padding-bottom: 6rem;
   }
 }
 
@@ -582,6 +587,12 @@ main section form .corpus_section_form_fields-2 .corpus_section_form_fields-2_fi
   justify-content: center;
   align-items: center;
   padding: 1.5rem 0 0 0;
+}
+
+.corpus_section_form_field-A_btn-belt.fourth {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
 }
 
 .corpus_section_form_field-A_btn-belt .corpus_section_form_field-A_btn-belt_btn-positioner {

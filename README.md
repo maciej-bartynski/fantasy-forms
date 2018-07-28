@@ -1,0 +1,2 @@
+Ćwiczenie ze stylowania formularzy, przedstawione jako tworzenie karty postaci do gry fantasy. Projekt jest w trakcie kodowania. Ogólny koncept można już oglądać, choć ukończenie przewiduję na 20.08.2018. W chwili obecnej wiele konceptów stylistycznych
+wciąż nosi status "tymczasowych".
